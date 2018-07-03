@@ -1,28 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="kr">
 <head>
-<title>Home | Haein's lab</title>
-<link rel="stylesheet" type="text/css" href="test.css">
+<title>홈 | 해인의 연구실</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+</style>
+</head>
 </head>
 <body>
-    <h1>Haein's lab</h1></p>
+        
 
-    Hello. My name is Hae In Jung. </p>
-    I'm a researcher in mechanical engineering.</p></p>
-    Welcome to visit this website. </p>
-    This website was built for providing useful informations about fluid mechanics & numerical analysis.</p>
-    
-    
-    Comming soon.
+<header>
+  <h2>해인 연구실</h2>
+</header>
 
-     
-    
-    
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">카오스 혼합</a></li>
+      <li><a href="#">여과장치</a></li>
+      <li><a href="#">수치해석</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>카오스 혼합</h1>
+    <p>혼합은 많은 자연적 공학적 응용에서 발생한다.</p>
+    </article>
+    <article>
+    <h1>여과장치</h1>
+    <p>직교류 여과</p>
+    </article>
+</section>
+
+<footer>
+  <p>본 웹사이트에 게시된 정보는 저작권법의 보호를 받습니다.</p>
+</footer>
+
 <address>
-    Contact <a href="mailto:hijung@kau.kr">HaeinJung</a>.<br> 
+    이메일 연락처 <a href="mailto:hijung@kau.kr">정해인</a>.<br> 
     
-
-
 </body>
-
-</html> 
+</html>
