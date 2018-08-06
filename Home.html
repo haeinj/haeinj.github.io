@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+<title>Home | Haein's research group</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #3c3c3c;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #3c3c3c;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+</style>
+</head>
+</head>
+<body>
+        
+
+<header>
+  <h2>Haein's research group</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Members.html">Members</a></li>
+      <li><a href="Research_area.html">Research area</a></li>
+      <li><a href="News.html">News</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Welcome</h1>
+    <p>Thank you for visiting this website.</p>
+    <p>I'm a graduate student at Korea aerospace university. The major research areas are chaotic mixing & cross-flow filtration by computational fluid dynamics.</p>
+    <h1>On going projects</h1>
+    <p>1. Numerical study on the mixing in Barrier-embedded partitioned pipe mixer (BPPM) for non-creeping flow condition </p>   
+    <p>Status: accepted in Korea-Australia rheology journal</p>    
+    <p>2. Numerical study on the mixing in Groove-embedded partitioned pipe mixer (GPPM) for creeping flow condition </p>   
+    <p>Status: in progress (parametric study)</p>
+    <p>3. Cross-flow filtration with Barrier-embedded partitioned pipe mixer (BPPM) </p>   
+    <p>Status: in progress (early stage)</p>    
+    </article>
+
+</section>
+
+<footer>
+  <p>© 2018 Haein's research group</p>
+</footer>
+
+    
+</body>
+</html>
