@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="980" height="203.98" viewBox="0 0 980.00 203.98" enable-background="new 0 0 980.00 203.98" xml:space="preserve">
+	<rect x="2.5" y="85.4799" fill="#FF0000" fill-opacity="1" stroke-width="5" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="100" height="99.9999"/>
+	<rect x="352.5" y="102.48" fill="#FF0000" fill-opacity="1" stroke-width="5" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="150" height="65.9999"/>
+	<rect x="827.5" y="69.4799" fill="#FF0000" fill-opacity="1" stroke-width="5" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="150" height="65.9999"/>
+	<rect x="102.5" y="85.4799" fill="#230FD2" fill-opacity="1" stroke-width="5" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="100" height="99.9999"/>
+	<rect x="502.5" y="102.48" fill="#230FD2" fill-opacity="1" stroke-width="5" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="150" height="66"/>
+	<rect x="827.5" y="135.48" fill="#230FD2" fill-opacity="1" stroke-width="5" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="150" height="66"/>
+	<text transform="matrix(0.9999998807907103 0.0000000000000000 0.0000000000000000 0.9999998807907103 205.00 36.00)" xml:space="preserve">
+		<tspan style=" font-family:맑은 고딕; font-size:36.000000pt;" letter-spacing="0.00em" fill="#000000" fill-opacity="1" stroke-linejoin="round">stretch</tspan>
+	</text>
+	<text transform="matrix(0.9999998807907103 0.0000000000000000 0.0000000000000000 0.9999998807907103 626.00 36.00)" xml:space="preserve">
+		<tspan style=" font-family:맑은 고딕; font-size:36.000000pt;" letter-spacing="0.00em" fill="#000000" fill-opacity="1" stroke-linejoin="round">cut &amp; stack</tspan>
+	</text>
+	<line fill="none" stroke-width="19" stroke-linejoin="round" x1="235" y1="135.48" x2="320.023" y2="135.48"/>
+	<path fill="#000000" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 320,135.204L 294.839,145.269L 297.839,137.341L 235.13,137.41L 235,135.618L 234.895,134.17L 235,134.17L 297.775,134.101L 294.425,126.243L 320,135.204"/>
+	<line fill="none" stroke-width="19" stroke-linejoin="round" x1="704.988" y1="135.48" x2="790.011" y2="135.48"/>
+	<path fill="#000000" fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M 789.988,135.204L 764.827,145.269L 767.827,137.341L 705.118,137.41L 704.988,135.618L 704.883,134.17L 704.988,134.17L 767.763,134.101L 764.413,126.243L 789.988,135.204"/>
+</svg>
