@@ -42,12 +42,23 @@
         }
         .notice-box strong { color: var(--primary); display: inline-block; margin-right: 8px; }
 
-        @media (max-width: 768px) { 
-            .hero-main { flex-direction: column; text-align: center; } 
-            .nav-links { display: none; } 
-            .hero-text h1 { font-size: 2.2rem; }
-            .notice-box { text-align: left; }
-        }
+		@media (max-width: 768px) { 
+					.hero-main { flex-direction: column; text-align: center; } 
+					
+					/* 메뉴가 사라지는 대신 가로로 나열되도록 변경 */
+					.nav-container { flex-direction: column; gap: 15px; }
+					.nav-links { 
+						display: flex; 
+						gap: 15px; 
+						margin-top: 10px;
+						font-size: 0.9rem;
+					} 
+					.nav-links a { margin-left: 0; }
+
+					.hero-text h1 { font-size: 2.2rem; }
+					.hero-image { order: -1; margin-bottom: 30px; } /* 이미지 위로 올리기 */
+					.notice-box { text-align: left; }
+				}
     </style>
 </head>
 <body>
