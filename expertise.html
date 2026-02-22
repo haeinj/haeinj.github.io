@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expertise | Haein Jung | Thermal Design Lab</title>
+    <title>Expertise | Haein Jung | CoolingMind</title>
     <style>
-        :root { --primary: #1a3a5a; --accent: #3498db; --bg: #ffffff; }
+        :root { --primary: #1a3a5a; --accent: #3498db; --bg: #ffffff; --light-blue: #f4f9ff; }
         body { font-family: 'Pretendard', sans-serif; margin: 0; color: #333; background: var(--bg); line-height: 1.7; }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
-        /* Navigation 바 */
+        /* Navigation */
         nav { background: #fff; padding: 20px 0; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 100; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 800; color: var(--primary); font-size: 1.2rem; text-decoration: none; }
@@ -17,23 +17,23 @@
         .nav-links a:hover { color: var(--accent); }
         .active { color: var(--accent) !important; }
 
-		@media (max-width: 768px) { 
-					.hero-main { flex-direction: column; text-align: center; } 
-					
-					/* 메뉴가 사라지는 대신 가로로 나열되도록 변경 */
-					.nav-container { flex-direction: column; gap: 15px; }
-					.nav-links { 
-						display: flex; 
-						gap: 15px; 
-						margin-top: 10px;
-						font-size: 0.9rem;
-					} 
-					.nav-links a { margin-left: 0; }
+        @media (max-width: 768px) { 
+            .nav-container { flex-direction: column; gap: 15px; }
+            .nav-links { display: flex; gap: 15px; margin-top: 10px; font-size: 0.9rem; } 
+            .nav-links a { margin-left: 0; }
+        }
 
-					.hero-text h1 { font-size: 2.2rem; }
-					.hero-image { order: -1; margin-bottom: 30px; } /* 이미지 위로 올리기 */
-					.notice-box { text-align: left; }
-				}
+        /* Expertise Cards */
+        .exp-card { background: #fff; padding: 40px; border-radius: 20px; border: 1px solid #eee; margin-bottom: 40px; transition: 0.3s; }
+        .exp-card:hover { border-color: var(--accent); box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+        .exp-card h3 { font-size: 1.5rem; margin-top: 0; display: flex; align-items: center; gap: 12px; }
+        .exp-card h3 span { font-size: 0.9rem; background: var(--light-blue); color: var(--accent); padding: 4px 12px; border-radius: 50px; }
+        
+        .sub-section { margin-top: 25px; }
+        .sub-title { color: var(--primary); font-weight: 700; display: block; margin-bottom: 8px; border-left: 4px solid var(--accent); padding-left: 12px; }
+        .sub-desc { font-size: 0.95rem; color: #555; padding-left: 16px; display: block; line-height: 1.8; margin-bottom: 20px; }
+
+        .ai-card { background: var(--light-blue); border-color: var(--accent); }
 
         footer { text-align: center; padding: 50px 0; color: #bbb; font-size: 0.8rem; border-top: 1px solid #eee; margin-top: 60px; }
     </style>
@@ -42,7 +42,7 @@
 
 <nav>
     <div class="container nav-container">
-        <a href="index.html" class="logo">HAEIN JUNG | Thermal Design Lab</a>
+        <a href="index.html" class="logo">HAEIN JUNG | CoolingMind</a>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="expertise.html" class="active">Expertise</a>
@@ -52,109 +52,99 @@
     </div>
 </nav>
 
-<div class="container" style="padding: 60px 20px;">
-    <h2 style="text-align: center; color: var(--primary); margin-bottom: 10px;">Expertise & Methodology</h2>
-    <p style="text-align: center; color: #666; margin-bottom: 50px;">실험 실증, 이론 모델링, 수치 해석을 통합한 하이브리드 열관리 엔지니어링 역량입니다.</p>
-    
-    <div style="display: grid; gap: 30px;">
+<div class="container" style="padding: 80px 20px;">
+    <header style="text-align: center; margin-bottom: 60px;">
+        <h2 style="font-size: 2.2rem; color: var(--primary); margin-bottom: 15px;">Core Expertise & Methodology</h2>
+        <p style="color: #666; max-width: 800px; margin: 0 auto;">
+            이론적 통찰에서 시작하여 전산 해석과 실험적 실증을 거쳐 AI 디지털 트윈으로 완성되는<br>
+            <strong>CoolingMind만의 4단계 통합 엔지니어링 프레임워크</strong>를 소개합니다.
+        </p>
+    </header>
+
+    <div class="expertise-list">
         
-        <div style="background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #eee; border-left: 8px solid #e67e22;">
-            <h3 style="color: #e67e22; margin-top: 0;">01. 실험 기반 시스템 실증 (Experimental Validation)</h3>
-            <p style="font-weight: 600; color: #444; margin-bottom: 20px;">"설계 도면 작성부터 시스템 통합 제어까지 하드웨어 전 공정을 직접 수행합니다."</p>
+        <div class="exp-card" style="border-top: 5px solid #94a3b8;">
+            <h3><span>STEP 01</span> 이론 기반 최적 예측</h3>
+            <p style="font-weight: 600; color: #444; margin-bottom: 25px;">"물리 법칙과 경험식을 통해 설계의 이론적 타당성을 선제적으로 검토합니다."</p>
             
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 실험 모듈 (냉각 핵심부 설계 및 제작)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 3D CAD를 활용한 정밀 냉각 장치(Heat Sink) 도면 작성 및 제작 관리<br>
-                        - 시스템 요구 사양에 최적화된 고정밀 센서(온도, 압력, 유량) 선정 및 배치<br>
-                        - 고속 카메라 및 광학계를 활용한 이상 유동(Two-phase flow) 투명 가시화 실험부 구현
-                    </span>
-                </li>
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 실험 루프 (순환 인프라 및 배관 시공)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 고압 펌프, 칠러, 열교환기 및 유체 탱크를 연동한 대규모 순환 루프 통합 구축<br>
-                        - 누설 방지 및 유동 안정성을 고려한 정밀 배관 라인 스케줄링 및 시공(Fittings/Valves)<br>
-                        - 정밀 실험 신뢰성 확보를 위한 계통 내 진공 작업 및 불응축 가스 제거 프로토콜 수립
-                    </span>
-                </li>
-                <li style="margin-bottom: 5px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 시스템 통합 (전장 제어 및 데이터 취득)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 컨트롤 박스 설계, 패널미터 배선 및 DC 전원 공급 장치 통합 전장 시스템 구성<br>
-                        - LabVIEW 기반 실시간 데이터 취득(DAQ) 및 맞춤형 사용자 인터페이스(GUI) 자체 개발<br>
-                        - 센서 피드백 기반 PID 자동 제어 알고리즘 및 시스템 보호용 비상 차단 스위치 구현
-                    </span>
-                </li>
-            </ul>
+            <div class="sub-section">
+                <strong class="sub-title">열역학 및 유체역학 모델링</strong>
+                <span class="sub-desc">
+                    - 레이저 발진기 및 고발열 소자의 열부하 정밀 산출<br>
+                    - 단상/2상 비등 유동 조건에서의 대류 열전달 계수 산출 및 냉각 한계(CHF) 예측
+                </span>
+                
+                <strong class="sub-title">수력학적 안정성 분석</strong>
+                <span class="sub-desc">
+                    - 계통 압력 손실 산정 및 펌프 소요 동력 최적화<br>
+                    - 비등 유동 시 유동 불안정성(Flow Instability) 및 진동 억제 설계 가이드라인 수립
+                </span>
+            </div>
         </div>
 
-        <div style="background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #eee; border-left: 8px solid #2ecc71;">
-            <h3 style="color: #2ecc71; margin-top: 0;">02. 이론 기반 설계 및 모델링 (Theoretical Modeling)</h3>
-            <p style="font-weight: 600; color: #444; margin-bottom: 20px;">"이론식과 경험식을 활용하여 시스템의 다중물리 특성을 선제적으로 예측합니다."</p>
+        <div class="exp-card" style="border-top: 5px solid var(--accent);">
+            <h3><span>STEP 02</span> 전산 해석 기반 상세 설계</h3>
+            <p style="font-weight: 600; color: #444; margin-bottom: 25px;">"CFD 및 다중물리 해석을 통해 시스템 내부의 물리적 거동을 정밀 시각화합니다."</p>
             
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 열적 특성 분석 (Heat Transfer & CHF)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 고발열 전자 장비 및 레이저 발진기의 열부하 모델링 및 발열량 정밀 산출<br>
-                        - 단상 및 2상 비등 유동 조건에서의 대류 열전달 계수 산출 및 냉각 한계(CHF) 예측<br>
-                        - 시스템 운전 조건별 상변화 메커니즘 분석을 통한 발열체 표면 온도 제어 가이드 제시
-                    </span>
-                </li>
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 수력학적 특성 분석 (Pressure Drop & Stability)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 복잡한 내부 채널 마찰계수 분석을 통한 계통 압력 손실 및 펌프 소요 동력 산정<br>
-                        - 비등 유동 시 기포 생성으로 인한 유동 불안정성(Flow Instability) 및 진동 억제 설계<br>
-                        - 최적 유량 배분을 위한 매니폴드 및 분기 배관의 수력학적 밸런싱 설계
-                    </span>
-                </li>
-                <li style="margin-bottom: 5px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 기구적 건전성 검토 (Structural Integrity)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 불균일 온도 구배에 의한 소재별 열팽창 차이 및 열응력(Thermal Stress) 위험도 평가<br>
-                        - 시스템 설계 수명 확보를 위한 열적-기계적 건전성 가이드라인 수립
-                    </span>
-                </li>
-            </ul>
+            <div class="sub-section">
+                <strong class="sub-title">고해상도 다중물리 해석 (CHT/FEM)</strong>
+                <span class="sub-desc">
+                    - 고체-유체 복합 열전달(CHT) 해석을 통한 정밀 온도 분포 및 핫스팟 가시화<br>
+                    - 불균일 온도 구배에 의한 열응력(Thermal Stress) 및 기구적 변형 예측
+                </span>
+                
+                <strong class="sub-title">유동 최적화 및 상변화 시뮬레이션</strong>
+                <span class="sub-desc">
+                    - 3차원 유동 해석을 통한 사구역(Dead Zone) 제거 및 균일 유량 분배 구조 설계<br>
+                    - 상변화(Boiling) 모델링을 통한 기포 거동 분석 및 액침 냉각 효율 극대화
+                </span>
+            </div>
         </div>
 
-        <div style="background: #fff; padding: 30px; border-radius: 15px; border: 1px solid #eee; border-left: 8px solid var(--accent);">
-            <h3 style="color: var(--accent); margin-top: 0;">03. 전산 해석 기반 상세 설계 (Computational Analysis)</h3>
-            <p style="font-weight: 600; color: #444; margin-bottom: 20px;">"CFD 및 FEM을 활용한 2D/3D 고충실도 해석을 통해 최적화 솔루션을 도출합니다."</p>
+        <div class="exp-card" style="border-top: 5px solid #e67e22;">
+            <h3><span>STEP 03</span> 축소 모델 실험 및 실증</h3>
+            <p style="font-weight: 600; color: #444; margin-bottom: 25px;">"실제 하드웨어 구축과 데이터 취득을 통해 해석 모델의 신뢰성을 최종 검증합니다."</p>
             
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 고해상도 온도장 분석 (Thermal Mapping)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - CFD를 활용한 복합 열전달(CHT) 해석으로 고체부와 유체부의 정밀 온도 분포 가시화<br>
-                        - 상변화(Boiling) 모델링을 통한 기포 거동 분석 및 핫스팟(Hot-spot) 제거 설계 최적화
-                    </span>
-                </li>
-                <li style="margin-bottom: 20px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 정밀 유동 및 압력장 분석 (Fluid Dynamics)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 3차원 유동 해석을 통한 유속 사구역(Dead Zone) 탐색 및 균일 유량 분배 구조 설계<br>
-                        - 시스템 내부 압력 강하 최소화를 위한 채널 형상 및 매니폴드 구조 최적 설계
-                    </span>
-                </li>
-                <li style="margin-bottom: 5px;">
-                    <strong style="color: var(--primary); display: block; margin-bottom: 5px;">• 다중물리 기반 응력 해석 (Multiphysics)</strong>
-                    <span style="font-size: 0.95rem; color: #555; padding-left: 12px; display: block; line-height: 1.6;">
-                        - 유동 압력과 열부하가 결합된 환경에서의 상세 열응력 해석 및 기구적 변형 예측<br>
-                        - 해석 데이터를 기반으로 극한 구동 환경에 적합한 기계적 소재 및 접합 방식 선정 지원
-                    </span>
-                </li>
-            </ul>
+            <div class="sub-section">
+                <strong class="sub-title">정밀 실험 인프라 구축</strong>
+                <span class="sub-desc">
+                    - 3D CAD 기반 정밀 냉각 모듈 제작 및 광학 가시화(Visualization) 실험부 구현<br>
+                    - 고압 펌프, 칠러, 계측기(DAQ)를 통합한 맞춤형 열유체 루프 설계 및 시공
+                </span>
+                
+                <strong class="sub-title">시스템 통합 및 데이터 분석</strong>
+                <span class="sub-desc">
+                    - LabVIEW 기반 실시간 모니터링 GUI 및 PID 자동 제어 알고리즘 자체 개발<br>
+                    - 실험-해석 결과 비교를 통한 경계 조건 보정 및 설계 모델의 실무 적용 신뢰성 확보
+                </span>
+            </div>
+        </div>
+
+        <div class="exp-card ai-card" style="border-top: 5px solid var(--primary);">
+            <h3><span>STEP 04</span> AI 기반 디지털 트윈</h3>
+            <p style="font-weight: 600; color: #444; margin-bottom: 25px;">"물리 기반 AI를 통해 실시간 예측과 지능형 제어가 가능한 차세대 열관리 솔루션을 제공합니다."</p>
+            
+            <div class="sub-section">
+                <strong class="sub-title">Physics-Informed AI Modeling</strong>
+                <span class="sub-desc">
+                    - PINNs 및 DeepONet을 활용한 고속 열유동 예측 대리 모델(Surrogate Model) 구축<br>
+                    - 물리 법칙을 준수하는 신경망 학습을 통해 데이터가 부족한 환경에서도 신뢰도 높은 결과 도출
+                </span>
+                
+                <strong class="sub-title">Real-time Digital Twin & Prognostics</strong>
+                <span class="sub-desc">
+                    - 센서 데이터 연동형 실시간 온도장 예측 및 가동 중 고장 진단(PHM) 시스템 구현<br>
+                    - 초고성능 연산 장치 및 레이저 시스템의 지능형 자율 열관리 알고리즘 최적화
+                </span>
+            </div>
         </div>
 
     </div>
 </div>
 
 <footer>
-    © 2026 Haein Jung. All Rights Reserved. This site is for academic portfolio and research collaboration purposes.
+    © 2026 Haein Jung. All Rights Reserved. <br>
+    Integrating Theory, Computation, Experiment, and AI for Thermal Excellence.
 </footer>
 
 </body>
