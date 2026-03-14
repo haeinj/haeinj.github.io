@@ -267,12 +267,163 @@ margin-top:20px;
 
 <section class="physics-fusion-wrap">
 
-<!-- 여기 SVG 코드 삽입 -->
-<!-- (사용자가 제공한 SVG 그대로 사용) -->
-
 <svg class="multislab-physics-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
 
-<!-- 생략 없이 사용자가 준 SVG 그대로 들어가면 됩니다 -->
+<defs>
+
+<radialGradient id="slabHeat" cx="50%" cy="50%" r="70%">
+<stop offset="0%" stop-color="#ff4d4d"/>
+<stop offset="50%" stop-color="#fb923c"/>
+<stop offset="100%" stop-color="#60a5fa" stop-opacity="0.2"/>
+</radialGradient>
+
+<pattern id="flowPattern" x="0" y="0" width="50" height="100" patternUnits="userSpaceOnUse">
+
+<path d="M25 0 V100" stroke="#0ea5e9" stroke-width="2" opacity="0.3"/>
+
+<circle cx="25" cy="0" r="3" fill="#38bdf8">
+<animate attributeName="cy" from="0" to="100" dur="1.6s" repeatCount="indefinite"/>
+</circle>
+
+</pattern>
+
+<filter id="laserGlow">
+<feGaussianBlur stdDeviation="4" result="blur"/>
+<feMerge>
+<feMergeNode in="blur"/>
+<feMergeNode in="SourceGraphic"/>
+</feMerge>
+</filter>
+
+</defs>
+
+<!-- background -->
+
+<rect width="1000" height="500" fill="#f8fafc" rx="14"/>
+
+<!-- title -->
+
+<text x="500" y="40" text-anchor="middle"
+font-family="Pretendard"
+font-size="22"
+font-weight="700"
+fill="#1e293b">
+
+Cooling-Driven Thermo-Optical Distortion
+
+</text>
+
+<!-- cooling channels -->
+
+<g>
+
+<rect x="260" y="110" width="70" height="280" fill="url(#flowPattern)"/>
+<rect x="390" y="110" width="70" height="280" fill="url(#flowPattern)"/>
+<rect x="520" y="110" width="70" height="280" fill="url(#flowPattern)"/>
+<rect x="650" y="110" width="70" height="280" fill="url(#flowPattern)"/>
+
+</g>
+
+<!-- slabs -->
+
+<g>
+
+<rect x="330" y="130" width="60" height="240"
+fill="url(#slabHeat)" stroke="#334155" stroke-width="1.5">
+
+<animate attributeName="opacity"
+values="0.85;1;0.85"
+dur="3s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<rect x="460" y="130" width="60" height="240"
+fill="url(#slabHeat)" stroke="#334155" stroke-width="1.5">
+
+<animate attributeName="opacity"
+values="0.85;1;0.85"
+dur="3s"
+begin="0.6s"
+repeatCount="indefinite"/>
+
+</rect>
+
+<rect x="590" y="130" width="60" height="240"
+fill="url(#slabHeat)" stroke="#334155" stroke-width="1.5">
+
+<animate attributeName="opacity"
+values="0.85;1;0.85"
+dur="3s"
+begin="1.2s"
+repeatCount="indefinite"/>
+
+</rect>
+
+</g>
+
+<!-- laser beam -->
+
+<g filter="url(#laserGlow)">
+
+<rect x="60" y="235" width="880" height="30"
+fill="#f43f5e" opacity="0.25"/>
+
+<!-- straight beam -->
+
+<path d="M60 250 H330"
+stroke="#e11d48"
+stroke-width="4"
+fill="none"/>
+
+<!-- distorted beam -->
+
+<path
+stroke="#fb7185"
+stroke-width="3"
+fill="none"
+stroke-dasharray="8 6">
+
+<animate attributeName="d"
+
+values="
+
+M330 250 Q370 230 390 250 T460 250 T520 250 T590 250 T650 250 Q800 210 940 250;
+
+M330 250 Q370 270 390 250 T460 250 T520 250 T590 250 T650 250 Q800 290 940 250;
+
+M330 250 Q370 230 390 250 T460 250 T520 250 T590 250 T650 250 Q800 210 940 250
+
+"
+
+dur="2.6s"
+repeatCount="indefinite"/>
+
+</path>
+
+</g>
+
+<!-- labels -->
+
+<g font-family="Pretendard" font-size="14" font-weight="600">
+
+<text x="60" y="210" fill="#e11d48">
+Input Laser
+</text>
+
+<text x="850" y="210" fill="#e11d48">
+Distorted Beam
+</text>
+
+<text x="490" y="430" text-anchor="middle" fill="#334155">
+Multi-Slab Gain Media (Solid + Thermal)
+</text>
+
+<text x="490" y="85" text-anchor="middle" fill="#0284c7">
+Convective Cooling Flow (Fluid)
+</text>
+
+</g>
 
 </svg>
 
