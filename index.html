@@ -1,645 +1,588 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>정해인 | Physics-AI for AI Infrastructure</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정해인 | AI 연산·전력 인프라 Physics-AI 연구</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <style>
+        :root {
+            --primary: #020617;
+            --accent: #2563eb;
+            --sub-accent: #f97316;
+            --bg: #ffffff;
+            --card-bg: #f8fafc;
+            --line: #e2e8f0;
 
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+            --tier1: #0ea5e9;
+            --tier2: #8b5cf6;
+            --tier3: #f59e0b;
 
-<style>
+            --method1: #64748b;
+            --method2: #0ea5e9;
+            --method3: #8b5cf6;
 
-:root{
---primary:#020617;
---accent:#2563eb;
---sub-accent:#f97316;
---bg:#ffffff;
---card-bg:#f8fafc;
---line:#e2e8f0;
+            --text-main: #1e293b;
+            --text-soft: #475569;
+            --text-muted: #64748b;
+        }
 
---theory:#64748b;
---compute:#0ea5e9;
---experiment:#f59e0b;
---ai:#8b5cf6;
+        * { box-sizing: border-box; }
 
---text-main:#1e293b;
---text-soft:#475569;
---text-muted:#64748b;
-}
+        body {
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+            color: var(--text-main);
+            background: var(--bg);
+            line-height: 1.68;
+            word-break: keep-all;
+        }
 
-*{box-sizing:border-box;}
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-body{
-font-family:'Pretendard',sans-serif;
-margin:0;
-background:var(--bg);
-color:var(--text-main);
-line-height:1.65;
-word-break:keep-all;
-}
+        header.simple-nav {
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 1px solid #f1f5f9;
+            background: #fff;
+        }
 
-.container{
-max-width:1040px;
-margin:0 auto;
-padding:0 24px;
-}
+        .logo {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
 
-header.simple-nav{
-padding:30px 0;
-text-align:center;
-border-bottom:1px solid #f1f5f9;
-background:#fff;
-}
+        .logo-sub {
+            margin-top: 8px;
+            font-size: 0.96rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
 
-.logo{
-font-weight:800;
-font-size:1.4rem;
-color:var(--primary);
-letter-spacing:-1px;
-}
+        .hero {
+            padding: 84px 0 42px;
+            text-align: center;
+        }
 
-.logo-sub{
-margin-top:8px;
-font-size:0.95rem;
-color:var(--text-muted);
-font-weight:600;
-}
+        .hero h1 {
+            margin: 0;
+            font-size: 3.1rem;
+            line-height: 1.22;
+            letter-spacing: -2px;
+            font-weight: 800;
+            color: var(--primary);
+        }
 
-.hero{
-padding:80px 0 40px;
-text-align:center;
-}
+        .hero h1 span {
+            color: var(--accent);
+        }
 
-.hero h1{
-font-size:3rem;
-margin:0;
-font-weight:800;
-letter-spacing:-2px;
-line-height:1.25;
-color:var(--primary);
-}
+        .hero p {
+            max-width: 900px;
+            margin: 24px auto 0;
+            font-size: 1.08rem;
+            color: var(--text-soft);
+        }
 
-.hero span{
-color:var(--accent);
-}
+        .hero-keywords {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
 
-.hero p{
-margin-top:24px;
-font-size:1.1rem;
-color:var(--text-soft);
-max-width:860px;
-margin-left:auto;
-margin-right:auto;
-}
+        .hero-keywords span {
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #f8fafc;
+            color: var(--text-soft);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
 
-.hero-keywords{
-margin-top:28px;
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-justify-content:center;
-}
+        .visual-wrap {
+            width: 100%;
+            margin: 54px auto 98px;
+            border-radius: 30px;
+            background: #f1f5f9;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
 
-.hero-keywords span{
-padding:8px 16px;
-border-radius:999px;
-border:1px solid var(--line);
-background:#f8fafc;
-font-size:0.9rem;
-font-weight:700;
-color:var(--text-soft);
-}
+        .concept-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: white;
+            border-radius: 20px;
+        }
 
-.section-title{
-text-align:center;
-margin-bottom:60px;
-}
+        .section-title {
+            text-align: center;
+            margin-bottom: 56px;
+        }
 
-.section-title h2{
-font-size:2.3rem;
-margin:0;
-font-weight:800;
-letter-spacing:-1px;
-color:var(--primary);
-}
+        .section-title h2 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--primary);
+        }
 
-.section-title p{
-margin-top:16px;
-color:var(--text-muted);
-max-width:780px;
-margin-left:auto;
-margin-right:auto;
-}
+        .section-title p {
+            margin: 16px auto 0;
+            max-width: 840px;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
 
-.industry-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-margin-bottom:100px;
-}
+        .focus-box {
+            background: linear-gradient(135deg, #eff6ff 0%, #f8fbff 100%);
+            border: 1px solid #dbeafe;
+            border-radius: 24px;
+            padding: 34px;
+            margin-bottom: 92px;
+        }
 
-.ind-card{
-padding:40px;
-background:var(--card-bg);
-border-radius:24px;
-border:1px solid var(--line);
-transition:0.25s;
-}
+        .focus-box h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.35rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
 
-.ind-card:hover{
-transform:translateY(-4px);
-border-color:var(--accent);
-background:#fff;
-box-shadow:0 20px 40px rgba(0,0,0,0.05);
-}
+        .focus-box p {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 1rem;
+        }
 
-.ind-card h3{
-margin:0 0 16px 0;
-font-size:1.55rem;
-letter-spacing:-0.5px;
-}
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 100px;
+        }
 
-.ind-card ul{
-padding-left:20px;
-margin:0;
-list-style:none;
-color:var(--text-soft);
-}
+        .tier-card {
+            background: var(--card-bg);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 34px;
+            transition: 0.25s ease;
+        }
 
-.ind-card li{
-margin-bottom:12px;
-position:relative;
-}
+        .tier-card:hover {
+            transform: translateY(-5px);
+            background: #fff;
+            box-shadow: 0 18px 36px rgba(0,0,0,0.05);
+        }
 
-.ind-card li::before{
-content:"✓";
-position:absolute;
-left:-20px;
-color:var(--accent);
-font-weight:bold;
-}
+        .tier-card.tier-1 { border-top: 6px solid var(--tier1); }
+        .tier-card.tier-2 { border-top: 6px solid var(--tier2); }
+        .tier-card.tier-3 { border-top: 6px solid var(--tier3); }
 
-.focus-box{
-background:linear-gradient(135deg,#eff6ff 0%,#f8fbff 100%);
-border:1px solid #dbeafe;
-border-radius:24px;
-padding:36px;
-margin-bottom:90px;
-}
+        .tier-badge {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+        }
 
-.focus-box h3{
-margin:0 0 12px 0;
-font-size:1.35rem;
-letter-spacing:-0.5px;
-}
+        .tier-1 .tier-badge { background: #e0f2fe; color: var(--tier1); }
+        .tier-2 .tier-badge { background: #f5f3ff; color: var(--tier2); }
+        .tier-3 .tier-badge { background: #fffbeb; color: var(--tier3); }
 
-.focus-box p{
-margin:0;
-color:var(--text-soft);
-}
+        .tier-card h3 {
+            margin: 0 0 14px 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
 
-.expertise-list{
-display:flex;
-flex-direction:column;
-gap:32px;
-margin-bottom:100px;
-}
+        .tier-card p {
+            margin: 0 0 18px 0;
+            color: var(--text-soft);
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
 
-.exp-card{
-padding:44px;
-border-radius:24px;
-border:1px solid var(--line);
-background:#fff;
-transition:0.25s;
-}
+        .tier-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
 
-.exp-card:hover{
-border-color:var(--accent);
-box-shadow:0 20px 45px rgba(0,0,0,0.06);
-}
+        .tier-card li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+        }
 
-.step-badge{
-font-size:0.82rem;
-font-weight:800;
-padding:6px 14px;
-border-radius:999px;
-margin-bottom:20px;
-display:inline-block;
-}
+        .tier-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 800;
+        }
 
-.step-01{border-top:6px solid var(--theory);}
-.step-02{border-top:6px solid var(--compute);}
-.step-03{border-top:6px solid var(--experiment);}
-.step-04{border-top:6px solid var(--ai);}
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 100px;
+        }
 
-.step-01 .step-badge{background:#f1f5f9;color:var(--theory);}
-.step-02 .step-badge{background:#eff6ff;color:var(--compute);}
-.step-03 .step-badge{background:#fffbeb;color:var(--experiment);}
-.step-04 .step-badge{background:#f5f3ff;color:var(--ai);}
+        .method-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            padding: 38px;
+            transition: 0.25s ease;
+        }
 
-.exp-card h3{
-margin:0;
-font-size:1.6rem;
-letter-spacing:-0.5px;
-}
+        .method-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 42px rgba(0,0,0,0.06);
+        }
 
-.exp-summary{
-margin-top:14px;
-font-weight:600;
-color:var(--text-soft);
-border-left:3px solid #e2e8f0;
-padding-left:14px;
-}
+        .method-card.method-1 { border-top: 6px solid var(--method1); }
+        .method-card.method-2 { border-top: 6px solid var(--method2); }
+        .method-card.method-3 { border-top: 6px solid var(--method3); }
 
-.sub-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-margin-top:28px;
-}
+        .method-badge {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+        }
 
-.sub-title{
-font-weight:700;
-margin-bottom:10px;
-display:block;
-}
+        .method-1 .method-badge { background: #f1f5f9; color: var(--method1); }
+        .method-2 .method-badge { background: #eff6ff; color: var(--method2); }
+        .method-3 .method-badge { background: #f5f3ff; color: var(--method3); }
 
-.sub-desc{
-list-style:none;
-padding:0;
-margin:0;
-color:var(--text-muted);
-}
+        .method-card h3 {
+            margin: 0 0 14px 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+        }
 
-.sub-desc li{
-margin-bottom:10px;
-padding-left:18px;
-position:relative;
-}
+        .method-summary {
+            margin: 0 0 18px 0;
+            color: var(--text-soft);
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
 
-.sub-desc li::before{
-content:"→";
-position:absolute;
-left:0;
-color:var(--accent);
-font-weight:bold;
-}
+        .method-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
 
-footer{
-padding:80px 0;
-background:var(--primary);
-color:#94a3b8;
-text-align:center;
-font-size:0.9rem;
-}
+        .method-card li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 10px;
+        }
 
-.btn-mail{
-color:white;
-text-decoration:none;
-font-weight:700;
-border-bottom:1px solid var(--accent);
-}
+        .method-card li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 800;
+        }
 
-@media(max-width:850px){
+        .integration-box {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: 40px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            margin-bottom: 100px;
+        }
 
-.hero h1{font-size:2.2rem;}
+        .integration-box h3 {
+            margin: 0 0 14px 0;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            color: var(--primary);
+        }
 
-.industry-grid,
-.sub-grid{
-grid-template-columns:1fr;
-}
+        .integration-box p {
+            margin: 0;
+            color: var(--text-soft);
+            font-size: 1rem;
+        }
 
-}
+        footer {
+            padding: 80px 0;
+            background: var(--primary);
+            color: #94a3b8;
+            text-align: center;
+            font-size: 0.92rem;
+        }
 
-</style>
+        .btn-mail {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        @media (max-width: 980px) {
+            .tier-grid, .method-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.95rem;
+            }
+
+            .tier-card, .method-card {
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
 <header class="simple-nav">
-<div class="container">
-
-<div class="logo">Physics-AI for AI Infrastructure | 정해인</div>
-
-<div class="logo-sub">
-AI 인프라의 열·냉각 병목 해결을 위한 Physics-AI 및 가상 제조 연구
-</div>
-
-</div>
+    <div class="container">
+        <div class="logo">AI 연산·전력 인프라 Physics-AI 연구 | 정해인</div>
+        <div class="logo-sub">Accelerator · Datacenter · SMR의 열·냉각 병목 해결을 위한 실험 · 모델링 · SciML</div>
+    </div>
 </header>
 
 <div class="container">
-
-<section class="hero">
-
-<h1>
-<span>AI Infrastructure와 SMR</span>을 위한<br>
-극한 열제어 Physics-AI
-</h1>
-
-<p>
-
-AI 반도체(HBM/NPU)와 데이터센터의 고발열·고전력 환경에서 발생하는
-열·냉각 병목을 Physics-AI 기반 모델링으로 해석·예측·최적화합니다.
-또한 차세대 원전(SMR)의 비등 열전달과 열안전 문제를
-디지털 트윈과 가상 제조 관점에서 연구합니다.
-
-</p>
-
-<div class="hero-keywords">
-
-<span>AI Infrastructure Cooling</span>
-<span>Thermal Bottlenecks</span>
-<span>Physics-Informed AI</span>
-<span>Digital Twin</span>
-
-</div>
-
-</section>
-
-<section class="focus-box">
-
-<h3>핵심 연구 문제</h3>
-
-<p>
-
-AI 인프라는 고밀도 연산으로 인해 전력·열·냉각 제약이 결합된 복합 시스템입니다.
-본 연구는 비등, 계면 불연속, 고열유속 냉각과 같은 Stiff PDE가 지배하는
-극한 열유체 시스템을 대상으로 실험, 이론, 수치해석, Scientific Machine Learning을 결합한
-Physics-AI 기반 예측·역설계·가상 제조 엔진을 구축합니다.
-
-</p>
-
-</section>
-
-<section class="section-title">
-
-<h2>핵심 응용 영역</h2>
-
-<p>
-
-AI 인프라의 열적 병목과 차세대 에너지 시스템의 열안전 문제를
-Physics-AI 기반 모델링으로 해석하고 최적화합니다.
-
-</p>
-
-</section>
-
-<div class="industry-grid">
-
-<div class="ind-card">
-
-<h3>AI 인프라</h3>
-
-<ul>
-
-<li><strong>AI 반도체(HBM/NPU)</strong>  
-고집적 가속기의 열 병목 완화를 위한 정밀 열제어 모델링</li>
-
-<li><strong>데이터센터</strong>  
-고전력 AI 클러스터의 액침 냉각 및 열관리 전략 최적화</li>
-
-<li><strong>Physics-AI 대리모델</strong>  
-초고속 추론 기반 상태 예측 및 운전 최적화 지원</li>
-
-</ul>
-
-</div>
-
-<div class="ind-card">
-
-<h3>차세대 에너지 시스템 (SMR)</h3>
-
-<ul>
-
-<li><strong>2상 냉각 안전성</strong>  
-비등 열전달 및 계면 거동의 물리 기반 해석</li>
-
-<li><strong>한계점 진단</strong>  
-임계열유속(CHF) 및 열적 불안정성 조기 감지</li>
-
-<li><strong>디지털 트윈</strong>  
-가상 제조 기반 운전 조건 최적화 및 설계 검증</li>
-
-</ul>
-
-</div>
-
-</div>
-
-<section class="section-title">
-
-<h2>통합 연구 체계</h2>
-
-<p>
-
-이론, 계산, 실험, AI를 분리하지 않고 하나의 Physics-AI 파이프라인으로 통합합니다.
-
-</p>
-
-</section>
-
-<div class="expertise-list">
-
-<div class="exp-card step-01">
-
-<span class="step-badge">STEP 01</span>
-
-<h3>이론 물리: 기구론적 모델링</h3>
-
-<p class="exp-summary">
-
-기초 물리 법칙과 기구론적 모델을 통해 극한 열유체 시스템의 거동을 정식화합니다.
-
-</p>
-
-<div class="sub-grid">
-
-<div>
-
-<strong class="sub-title">비등 및 상변화 물리</strong>
-
-<ul class="sub-desc">
-
-<li>기포 성장 및 열유속 분할 메커니즘</li>
-<li>CHF 및 열적 불안정성 모델링</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<strong class="sub-title">Stiff PDE 분석</strong>
-
-<ul class="sub-desc">
-
-<li>계면 불연속 시스템의 안정성 분석</li>
-<li>물리적 작동 한계 영역 규명</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="exp-card step-02">
-
-<span class="step-badge">STEP 02</span>
-
-<h3>계산 물리: 고정밀 열유체 해석</h3>
-
-<p class="exp-summary">
-
-고해상도 수치해석을 통해 복잡한 유동장과 온도장을 정밀하게 모사합니다.
-
-</p>
-
-<div class="sub-grid">
-
-<div>
-
-<strong class="sub-title">다상 유동 시뮬레이션</strong>
-
-<ul class="sub-desc">
-
-<li>VOF 기반 비등 및 2상 유동 해석</li>
-<li>고열유속 냉각 구조의 3D 온도장 예측</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<strong class="sub-title">학습 데이터 구축</strong>
-
-<ul class="sub-desc">
-
-<li>Physics-AI 학습용 고신뢰 데이터 생성</li>
-<li>복잡 계면 현상의 수치적 Ground Truth 확보</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="exp-card step-03">
-
-<span class="step-badge">STEP 03</span>
-
-<h3>실험 물리: 실측 기반 검증</h3>
-
-<p class="exp-summary">
-
-정밀 계측과 유동 가시화를 통해 모델의 타당성을 검증합니다.
-
-</p>
-
-<div class="sub-grid">
-
-<div>
-
-<strong class="sub-title">정밀 계측</strong>
-
-<ul class="sub-desc">
-
-<li>열유체 실험 루프 구축</li>
-<li>고속 가시화 기반 유동 분석</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<strong class="sub-title">모델 검증</strong>
-
-<ul class="sub-desc">
-
-<li>실측 데이터 기반 모델 보정</li>
-<li>이론-해석-실험 상관성 확보</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="exp-card step-04">
-
-<span class="step-badge">STEP 04</span>
-
-<h3>Physics-AI 모델링</h3>
-
-<p class="exp-summary">
-
-물리 법칙을 신경망에 내재화하여 초고속 예측과 역설계를 구현합니다.
-
-</p>
-
-<div class="sub-grid">
-
-<div>
-
-<strong class="sub-title">Physics-Informed Neural Networks</strong>
-
-<ul class="sub-desc">
-
-<li>보존 법칙 기반 신경망 구조</li>
-<li>계면 불연속 문제 해결</li>
-
-</ul>
-
-</div>
-
-<div>
-
-<strong class="sub-title">Surrogate Modeling</strong>
-
-<ul class="sub-desc">
-
-<li>DeepONet 기반 대리모델</li>
-<li>디지털 트윈 및 가상 제조 확장</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+    <section class="hero">
+        <h1>
+            <span>AI 연산·전력 인프라</span>를 위한<br />
+            극한 열제어 Physics-AI
+        </h1>
+        <p>
+            AI 가속기, 데이터센터, 그리고 대규모 AI 연산을 지탱하는 전력 시스템(SMR)을
+            하나의 물리 인프라 관점에서 바라보고, 고발열·고전력 환경에서 발생하는
+            열·냉각 병목을 실험, 물리 모델링·시뮬레이션, SciML 및 디지털 트윈으로
+            해석·예측·최적화합니다.
+        </p>
+
+        <div class="hero-keywords">
+            <span>AI Accelerator Cooling</span>
+            <span>Datacenter Thermal Management</span>
+            <span>SMR Thermal Safety</span>
+            <span>Physics-AI</span>
+            <span>Scientific Machine Learning</span>
+            <span>Digital Twin</span>
+        </div>
+
+        <div class="visual-wrap">
+            <svg class="concept-svg" viewBox="0 0 1100 520" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="topGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#eff6ff"/>
+                        <stop offset="100%" stop-color="#f8fafc"/>
+                    </linearGradient>
+                    <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#93c5fd"/>
+                        <stop offset="100%" stop-color="#8b5cf6"/>
+                    </linearGradient>
+                </defs>
+
+                <rect x="0" y="0" width="1100" height="520" rx="18" fill="#ffffff"/>
+
+                <text x="550" y="48" text-anchor="middle" font-size="24" font-weight="800" fill="#1e293b">
+                    AI Compute & Power Infrastructure
+                </text>
+
+                <!-- Top 3 tiers -->
+                <rect x="90" y="95" width="260" height="120" rx="18" fill="#f0f9ff" stroke="#bae6fd"/>
+                <text x="220" y="135" text-anchor="middle" font-size="22" font-weight="800" fill="#0369a1">Accelerator</text>
+                <text x="220" y="168" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">HBM · GPU · NPU</text>
+                <text x="220" y="192" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">High heat flux cooling</text>
+
+                <rect x="420" y="95" width="260" height="120" rx="18" fill="#f5f3ff" stroke="#ddd6fe"/>
+                <text x="550" y="135" text-anchor="middle" font-size="22" font-weight="800" fill="#6d28d9">Datacenter</text>
+                <text x="550" y="168" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Rack · Cluster · Facility</text>
+                <text x="550" y="192" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Liquid / immersion cooling</text>
+
+                <rect x="750" y="95" width="260" height="120" rx="18" fill="#fffbeb" stroke="#fde68a"/>
+                <text x="880" y="135" text-anchor="middle" font-size="22" font-weight="800" fill="#b45309">SMR</text>
+                <text x="880" y="168" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Power for AI infrastructure</text>
+                <text x="880" y="192" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Boiling / CHF / safety</text>
+
+                <!-- arrows -->
+                <path d="M350 155 L420 155" stroke="url(#flowGrad)" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+                <path d="M680 155 L750 155" stroke="url(#flowGrad)" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+                <!-- Methods layer -->
+                <rect x="90" y="290" width="920" height="150" rx="22" fill="url(#topGrad)" stroke="#e2e8f0"/>
+                <text x="550" y="325" text-anchor="middle" font-size="22" font-weight="800" fill="#1e293b">
+                    Methods
+                </text>
+
+                <line x1="396" y1="345" x2="396" y2="418" stroke="#cbd5e1" stroke-width="1.5"/>
+                <line x1="703" y1="345" x2="703" y2="418" stroke="#cbd5e1" stroke-width="1.5"/>
+
+                <text x="243" y="370" text-anchor="middle" font-size="19" font-weight="800" fill="#334155">실험</text>
+                <text x="243" y="398" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">정밀 계측 · 가시화 · 검증</text>
+
+                <text x="550" y="370" text-anchor="middle" font-size="19" font-weight="800" fill="#0284c7">모델링·시뮬레이션</text>
+                <text x="550" y="398" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">Mechanistic 모델 · CFD · Multiphysics</text>
+
+                <text x="856" y="370" text-anchor="middle" font-size="19" font-weight="800" fill="#7c3aed">SciML / Digital Twin</text>
+                <text x="856" y="398" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">PINN · DeepONet · 실시간 예측</text>
+
+                <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L10,3 L0,6 Z" fill="#8b5cf6"/>
+                    </marker>
+                </defs>
+
+                <text x="550" y="480" text-anchor="middle" font-size="18" font-weight="800" fill="#1e293b">
+                    Thermal Bottlenecks → Prediction → Optimization → Digital Operation
+                </text>
+            </svg>
+        </div>
+    </section>
+
+    <section class="focus-box">
+        <h3>핵심 연구 문제</h3>
+        <p>
+            미래 AI 시스템의 병목은 연산 성능만의 문제가 아니라, AI 가속기, 데이터센터, 전력 인프라가 결합된
+            물리 시스템의 열·냉각·안전성 문제입니다. 본 연구는 비등, 계면 불연속, 고열유속 냉각, 열적 불안정성과 같은
+            복잡한 열유체 현상을 대상으로, 실험 기반 Ground Truth, 물리 모델링, 고정밀 시뮬레이션,
+            Scientific Machine Learning을 결합하여 빠르고 신뢰도 높은 예측·역설계·디지털 운전 기술을 구축합니다.
+        </p>
+    </section>
+
+    <section class="section-title">
+        <h2>대상 시스템: AI 연산·전력 인프라 3계층</h2>
+        <p>
+            연구 대상은 AI 가속기, 데이터센터, SMR로 구분되며, 각각의 열 병목을 개별적으로 다루는 동시에
+            하나의 연속된 인프라 시스템으로 연결해 해석합니다.
+        </p>
+    </section>
+
+    <div class="tier-grid">
+        <div class="tier-card tier-1">
+            <span class="tier-badge">TIER 01</span>
+            <h3>Accelerator</h3>
+            <p>HBM, GPU, NPU 등 고집적 AI 가속기의 초고열유속 냉각 문제를 다룹니다.</p>
+            <ul>
+                <li>칩·패키지 레벨 열 병목 해석</li>
+                <li>고열유속 제거를 위한 냉각 구조 최적화</li>
+                <li>2상 냉각 및 차세대 패키징 열관리 검토</li>
+            </ul>
+        </div>
+
+        <div class="tier-card tier-2">
+            <span class="tier-badge">TIER 02</span>
+            <h3>Datacenter</h3>
+            <p>고전력 AI 랙과 클러스터의 액체 냉각, 액침 냉각, 시설 단위 열관리 문제를 다룹니다.</p>
+            <ul>
+                <li>랙 및 루프 단위 열·유동 성능 예측</li>
+                <li>액침 냉각 및 liquid cooling 운전 최적화</li>
+                <li>상태 예측 기반 운영 안정성 및 효율 향상</li>
+            </ul>
+        </div>
+
+        <div class="tier-card tier-3">
+            <span class="tier-badge">TIER 03</span>
+            <h3>SMR</h3>
+            <p>대규모 AI 연산을 지탱하는 차세대 전력 인프라로서 SMR의 비등 열전달 및 열안전 문제를 다룹니다.</p>
+            <ul>
+                <li>비등 열전달 및 2상 유동 거동 해석</li>
+                <li>CHF, DNB, 열적 불안정성 진단</li>
+                <li>열안전성 기반 운전 조건 및 설계 검토</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section-title">
+        <h2>연구 방법: 3개 축</h2>
+        <p>
+            실험, 모델링·시뮬레이션, SciML/디지털 트윈을 분리된 단계가 아니라 상호 보완되는 하나의 연구 체계로 운용합니다.
+        </p>
+    </section>
+
+    <div class="method-grid">
+        <div class="method-card method-1">
+            <span class="method-badge">METHOD 01</span>
+            <h3>실험</h3>
+            <p class="method-summary">정밀 계측과 가시화를 통해 실제 열유체 현상을 측정하고 물리적 타당성을 확보합니다.</p>
+            <ul>
+                <li>고속 가시화 및 정밀 센서 기반 실험 루프 구축</li>
+                <li>압력, 온도, 유량, 벽면 반응의 동시 계측</li>
+                <li>모델 검증용 Ground Truth 데이터 확보</li>
+            </ul>
+        </div>
+
+        <div class="method-card method-2">
+            <span class="method-badge">METHOD 02</span>
+            <h3>모델링 · 시뮬레이션</h3>
+            <p class="method-summary">Mechanistic 모델과 고정밀 수치해석으로 실험으로 직접 보기 어려운 현상을 정식화하고 재현합니다.</p>
+            <ul>
+                <li>비등, 상변화, 계면 불연속의 물리 모델링</li>
+                <li>CFD 및 multiphysics 기반 3차원 열유체 해석</li>
+                <li>고신뢰 학습용 데이터셋 및 설계 지식 생성</li>
+            </ul>
+        </div>
+
+        <div class="method-card method-3">
+            <span class="method-badge">METHOD 03</span>
+            <h3>SciML / Digital Twin</h3>
+            <p class="method-summary">Physics-informed 학습과 대리모델을 통해 빠른 예측, 역설계, 실시간 운전 지원을 구현합니다.</p>
+            <ul>
+                <li>PINN, XPINN, DeepONet 기반 Physics-AI 모델 개발</li>
+                <li>고비용 해석 대체용 surrogate model 구축</li>
+                <li>디지털 트윈 기반 상태 예측 및 운영 최적화</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="integration-box">
+        <h3>통합 연구 프레임</h3>
+        <p>
+            Accelerator, Datacenter, SMR는 분리된 주제가 아니라 AI 연산·전력 인프라를 구성하는 연결된 계층입니다.
+            본 연구는 이 3계층을 공통의 열유체 물리와 병목 관점에서 묶고, 실험으로 검증하고, 모델링·시뮬레이션으로 해석하며,
+            SciML과 디지털 트윈으로 빠르게 예측하고 최적화하는 통합 Physics-AI 프레임을 지향합니다.
+        </p>
+    </section>
 </div>
 
 <footer>
-
-<div class="container">
-
-<p>© 2026 정해인 | Physics-AI for AI Infrastructure</p>
-
-<p style="margin-top:10px;opacity:0.8">
-Research on Physics-AI for Thermal Bottlenecks in AI Infrastructure and SMR Systems
-</p>
-
-<p>
-Contact :
-<a href="mailto:haeinjung@gm.gist.ac.kr" class="btn-mail">
-haeinjung@gm.gist.ac.kr
-</a>
-</p>
-
-</div>
-
+    <div class="container">
+        <p>© 2026 정해인 | AI 연산·전력 인프라 Physics-AI 연구</p>
+        <p style="margin-top: 10px; opacity: 0.82;">Physics-AI for Thermal Bottlenecks in Accelerators, Datacenters, and SMR Systems</p>
+        <p>Contact: <a href="mailto:haeinjung@gm.gist.ac.kr" class="btn-mail">haeinjung@gm.gist.ac.kr</a></p>
+    </div>
 </footer>
 
 </body>
