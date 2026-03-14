@@ -22,6 +22,8 @@ margin:0 auto;
 padding:0 20px;
 }
 
+/* NAV */
+
 nav{
 background:#fff;
 padding:20px 0;
@@ -55,18 +57,10 @@ font-weight:600;
 color:var(--accent);
 }
 
+/* HERO */
+
 .hero{
-padding:100px 0 60px;
-}
-
-.hero-main{
-display:flex;
-align-items:center;
-gap:60px;
-}
-
-.hero-text{
-flex:1.2;
+padding:100px 0 40px;
 }
 
 .hero-text h1{
@@ -74,17 +68,6 @@ font-size:3rem;
 color:var(--primary);
 margin:0;
 line-height:1.35;
-}
-
-.hero-image{
-flex:1;
-text-align:right;
-}
-
-.hero-image img{
-max-width:100%;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .btn-contact{
@@ -102,6 +85,26 @@ transition:0.3s;
 .btn-contact:hover{
 background:var(--accent);
 }
+
+/* SVG PHYSICS VISUAL */
+
+.physics-fusion-wrap{
+width:100%;
+max-width:900px;
+margin:40px auto 60px auto;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+border:1px solid #f1f5f9;
+}
+
+.multislab-physics-svg{
+width:100%;
+height:auto;
+display:block;
+}
+
+/* PHYSICS DOMAINS */
 
 .physics-section{
 padding:70px 0;
@@ -143,6 +146,8 @@ color:#666;
 margin:0;
 }
 
+/* FRAMEWORK */
+
 .section-framework{
 padding:80px 0;
 border-top:1px solid #eee;
@@ -176,7 +181,6 @@ font-weight:800;
 font-size:0.85rem;
 display:block;
 margin-bottom:10px;
-letter-spacing:0.5px;
 }
 
 .step-card h3{
@@ -207,10 +211,6 @@ color:#777;
 line-height:1.8;
 }
 
-.notice-box strong{
-color:var(--primary);
-}
-
 footer{
 text-align:center;
 padding:50px 0;
@@ -220,39 +220,6 @@ border-top:1px solid #eee;
 margin-top:20px;
 }
 
-@media(max-width:768px){
-.hero-main{
-flex-direction:column;
-text-align:center;
-}
-
-.nav-container{
-flex-direction:column;
-gap:15px;
-}
-
-.nav-links{
-display:flex;
-gap:15px;
-margin-top:10px;
-font-size:0.9rem;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.nav-links a{
-margin-left:0;
-}
-
-.hero-text h1{
-font-size:2.2rem;
-}
-
-.hero-image{
-order:-1;
-margin-bottom:30px;
-}
-}
 </style>
 </head>
 
@@ -276,62 +243,69 @@ margin-bottom:30px;
 <div class="container">
 
 <header class="hero">
-<div class="hero-main">
 
 <div class="hero-text">
 
 <h1>
-<span style="color:var(--accent)">냉각계 유동에서 시작되는</span><br>
+<span style="color:var(--accent)">냉각 유동에서 시작되는</span><br>
 열-응력-광왜곡 연성 해석
 </h1>
 
 <p style="margin-top:22px; color:#666; font-size:1.02rem;">
-대류 냉각 유동, 온도장, 열응력, 광왜곡이 순차적으로 연결되는 문제를 연구합니다.<br>
-특히 <strong>냉각 유동 → 열전달 → 구조 변형 → 광학 성능 저하</strong>로 이어지는 연성 물리 문제를
-이론, 수치해석, 실험, AI 기반 모델링으로 다룹니다.
+대류 냉각 유동 → 온도장 → 열응력 → 광왜곡으로 이어지는 물리 문제를 연구합니다.
 </p>
 
 <a href="mailto:haeinjung@gm.gist.ac.kr" class="btn-contact">문의하기</a>
 
 </div>
 
-<div class="hero-image">
-<img src="final_illustration.png" alt="열-광 연성 물리 해석">
-</div>
-
-</div>
 </header>
 
+</div>
+
+<!-- SVG PHYSICS DIAGRAM -->
+
+<section class="physics-fusion-wrap">
+
+<!-- 여기 SVG 코드 삽입 -->
+<!-- (사용자가 제공한 SVG 그대로 사용) -->
+
+<svg class="multislab-physics-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+
+<!-- 생략 없이 사용자가 준 SVG 그대로 들어가면 됩니다 -->
+
+</svg>
+
+</section>
+
+<div class="container">
 
 <section class="physics-section">
 
 <div style="text-align:center;">
-<h2 style="color:var(--primary); font-size:2rem; margin-bottom:12px;">핵심 물리 영역</h2>
-<p style="color:#777; max-width:760px; margin:0 auto;">
-하나의 문제를 구성하는 네 가지 물리 축을 중심으로 연구를 전개합니다.
-</p>
+<h2 style="color:var(--primary); font-size:2rem;">핵심 물리 영역</h2>
 </div>
 
 <div class="physics-grid">
 
 <div class="physics-card">
 <h3>열물리</h3>
-<p>열발생, 전도, 온도분포, 열경계조건 해석</p>
+<p>온도장과 열전달 해석</p>
 </div>
 
 <div class="physics-card">
 <h3>유체물리</h3>
-<p>대류 냉각, 유동장 형성, 열유동 연성 거동 해석</p>
+<p>대류 냉각과 유동장 해석</p>
 </div>
 
 <div class="physics-card">
 <h3>고체물리</h3>
-<p>열응력, 열변형, 구조 건전성 및 변형 응답 분석</p>
+<p>열응력과 구조 변형</p>
 </div>
 
 <div class="physics-card">
 <h3>광물리</h3>
-<p>파면 왜곡, 열렌징, 광학 성능 변화 해석</p>
+<p>파면 왜곡과 열렌즈</p>
 </div>
 
 </div>
@@ -342,10 +316,7 @@ margin-bottom:30px;
 <section class="section-framework">
 
 <div style="text-align:center;">
-<h2 style="color:var(--primary); font-size:2rem; margin-bottom:12px;">연구 수행 체계</h2>
-<p style="color:#777; max-width:760px; margin:0 auto;">
-실제 수행하는 연구 흐름에 맞추어 이론, 해석, 실험, AI 모델링을 단계적으로 연결합니다.
-</p>
+<h2 style="color:var(--primary); font-size:2rem;">연구 수행 체계</h2>
 </div>
 
 <div class="framework-grid">
@@ -353,32 +324,27 @@ margin-bottom:30px;
 <div class="step-card">
 <span class="step-num">STEP 01</span>
 <h3>이론 물리 해석</h3>
-<p>지배방정식, 스케일링, 무차원수, 물리 모델을 바탕으로 문제를 정식화합니다.</p>
+<p>지배방정식과 물리 모델 정식화</p>
 </div>
 
 <div class="step-card">
 <span class="step-num">STEP 02</span>
 <h3>계산 물리 해석</h3>
-<p>CFD, 열해석, 구조해석 및 연성 수치해석을 통해 복잡한 물리 현상을 계산합니다.</p>
+<p>CFD, 열해석, 구조해석</p>
 </div>
 
 <div class="step-card">
 <span class="step-num">STEP 03</span>
 <h3>실험 검증</h3>
-<p>실험 데이터와 계측 결과를 바탕으로 해석 모델의 타당성과 신뢰성을 검토합니다.</p>
+<p>실험 데이터를 통한 모델 검증</p>
 </div>
 
 <div class="step-card ai-highlight">
 <span class="step-num">STEP 04</span>
 <h3>AI 물리 해석</h3>
-<p>Scientific ML, PINN, surrogate model 등을 활용하여 빠른 예측과 모델 확장을 수행합니다.</p>
+<p>Scientific ML 기반 예측 모델</p>
 </div>
 
-</div>
-
-<div class="notice-box">
-<strong>[연구 방향]</strong><br>
-본 포트폴리오는 냉각 유동과 열-응력-광왜곡 연성 문제를 중심으로 수행한 연구와 해석 체계를 정리한 것입니다.
 </div>
 
 </section>
