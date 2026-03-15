@@ -1,0 +1,92 @@
+<section class="hero">
+    <h1>
+        <span>극한 열유체 시스템</span>을 위한<br />
+        실험-이론-계산-AI물리 통합 연구
+    </h1>
+
+    <p>
+        비등, 상변화, 계면, 열적 불안정성과 같은 복잡한 현상을 대상으로,
+        정밀 실험에서 얻은 ground truth와 물리 기반 이론, 고신뢰 수치해석,
+        그리고 physics-informed machine learning을 연결하여 열전달과 2상 유동을
+        더 일반적이고 예측 가능하게 만드는 Physics-AI 프레임을 지향합니다.
+    </p>
+
+    <div class="hero-keywords">
+        <span>Flow Boiling</span>
+        <span>Phase Change Heat Transfer</span>
+        <span>Thermal Instability</span>
+        <span>Experiment</span>
+        <span>Theory</span>
+        <span>Computation</span>
+        <span>Physics-AI</span>
+        <span>Digital Twin</span>
+    </div>
+
+    <div class="visual-wrap">
+        <svg class="concept-svg" viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="topGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#eff6ff"/>
+                    <stop offset="100%" stop-color="#f8fafc"/>
+                </linearGradient>
+                <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#93c5fd"/>
+                    <stop offset="100%" stop-color="#8b5cf6"/>
+                </linearGradient>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L10,3 L0,6 Z" fill="#8b5cf6"/>
+                </marker>
+            </defs>
+
+            <rect x="0" y="0" width="1100" height="560" rx="18" fill="#ffffff"/>
+
+            <text x="550" y="48" text-anchor="middle" font-size="24" font-weight="800" fill="#1e293b">
+                Physics-AI Framework for Two-Phase Thermal Systems
+            </text>
+
+            <rect x="130" y="95" width="340" height="126" rx="18" fill="#f0f9ff" stroke="#bae6fd"/>
+            <text x="300" y="136" text-anchor="middle" font-size="23" font-weight="800" fill="#0369a1">Accelerator</text>
+            <text x="300" y="169" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">HBM · GPU · Package · Cold Plate</text>
+            <text x="300" y="193" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">High heat flux and compact cooling</text>
+
+            <rect x="630" y="95" width="340" height="126" rx="18" fill="#f5f3ff" stroke="#ddd6fe"/>
+            <text x="800" y="136" text-anchor="middle" font-size="23" font-weight="800" fill="#6d28d9">Datacenter</text>
+            <text x="800" y="169" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Rack · Loop · Facility · Immersion</text>
+            <text x="800" y="193" text-anchor="middle" font-size="14" font-weight="600" fill="#475569">Liquid and two-phase thermal operation</text>
+
+            <path d="M470 158 L630 158" stroke="url(#flowGrad)" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+            <rect x="90" y="285" width="920" height="188" rx="22" fill="url(#topGrad)" stroke="#e2e8f0"/>
+            <text x="550" y="324" text-anchor="middle" font-size="22" font-weight="800" fill="#1e293b">Research Axes</text>
+
+            <line x1="320" y1="348" x2="320" y2="438" stroke="#cbd5e1" stroke-width="1.5"/>
+            <line x1="550" y1="348" x2="550" y2="438" stroke="#cbd5e1" stroke-width="1.5"/>
+            <line x1="780" y1="348" x2="780" y2="438" stroke="#cbd5e1" stroke-width="1.5"/>
+
+            <text x="205" y="376" text-anchor="middle" font-size="19" font-weight="800" fill="#334155">실험</text>
+            <text x="205" y="403" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">정밀 계측 · 가시화 · 데이터 확보</text>
+
+            <text x="435" y="376" text-anchor="middle" font-size="19" font-weight="800" fill="#0284c7">이론</text>
+            <text x="435" y="403" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">보존식 · 계면 수송 · 메커니즘 정식화</text>
+
+            <text x="665" y="376" text-anchor="middle" font-size="19" font-weight="800" fill="#0891b2">계산</text>
+            <text x="665" y="403" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">CFD · Multiphysics · Surrogate</text>
+
+            <text x="895" y="376" text-anchor="middle" font-size="19" font-weight="800" fill="#7c3aed">AI물리</text>
+            <text x="895" y="403" text-anchor="middle" font-size="14" font-weight="600" fill="#64748b">PINN · DeepONet · Neural Operator</text>
+
+            <text x="550" y="514" text-anchor="middle" font-size="18" font-weight="800" fill="#1e293b">
+                Measurement → Understanding → Prediction → Optimization
+            </text>
+        </svg>
+    </div>
+
+    <section class="focus-box">
+        <h3>핵심 연구 문제</h3>
+        <p>
+            고열유속 냉각과 상변화 열전달 시스템의 성능은 평균값 몇 개로 설명되지 않는 국소적·비정상적 현상에 의해 지배됩니다.
+            본 연구는 벽면 온도 분포, 기포·계면 거동, 액막 두께, 유동·열장의 시공간 변화를 실험적으로 계측하고,
+            이를 이론 모델과 계산 해석, physics-informed 학습으로 연결하여 2상 유동과 열전달의 일반화된 예측 체계를 구축하는 데 초점을 둡니다.
+        </p>
+    </section>
+</section>
