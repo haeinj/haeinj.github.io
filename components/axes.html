@@ -1,28 +1,47 @@
 <section class="section-title">
-    <h2>연구 축: 실험 · 이론 · 계산 · AI물리</h2>
-    <p>네 축을 하나의 Physics-AI 파운데이션 모델로 통합 (Hard-Constraint XPINN + DeepONet)</p>
+    <h2>연구 축: AI이론 · 알고리즘 · 물리제약 · 도메인검증</h2>
+    <p>SciML 알고리즘 연구와 열유체 도메인 전문성의 교차점 — 어느 한쪽만으로는 불가능한 연구</p>
 </section>
 
 <div class="axis-grid">
     <div class="axis-card axis-1">
         <span class="axis-badge">AXIS 01</span>
-        <h3>실험</h3>
-        <p class="axis-summary">고속 가시화·정밀 계측으로 HBM·SMR용 Ground Truth 데이터셋 구축</p>
-        <ul><li>벽면 온도·기포·액막 동시 계측</li><li>Hidden Fluid Mechanics 영상 역추적</li></ul>
+        <h3>AI 이론</h3>
+        <p class="axis-summary">PINN 수렴 실패의 수학적 메커니즘 분석</p>
+        <ul>
+            <li>Spectral Bias · Gradient Pathology 분석</li>
+            <li>Loss Landscape 수학적 특성 규명</li>
+            <li>역문제 비유일성 이론 정립</li>
+        </ul>
     </div>
     <div class="axis-card axis-2">
         <span class="axis-badge">AXIS 02</span>
-        <h3>이론</h3>
-        <p class="axis-summary">슬라이딩 기포·4요소 열유속 등 물리 법칙을 Hard-Constraint로 강제</p>
+        <h3>알고리즘</h3>
+        <p class="axis-summary">Hard-Constraint XPINN 적응형 학습 설계</p>
+        <ul>
+            <li>경계조건 항등 만족 아키텍처</li>
+            <li>Adaptive Collocation Sampling</li>
+            <li>DeepONet Neural Operator</li>
+        </ul>
     </div>
     <div class="axis-card axis-3">
         <span class="axis-badge">AXIS 03</span>
-        <h3>계산</h3>
-        <p class="axis-summary">CLSVOF CFD로 고충실 데이터 생성 및 surrogate 학습 기반 구축</p>
+        <h3>물리 제약</h3>
+        <p class="axis-summary">도메인 지식을 알고리즘에 주입하는 설계</p>
+        <ul>
+            <li>보존 법칙 Hard-Constraint 강제</li>
+            <li>슬라이딩 기포·4요소 열유속 모델</li>
+            <li>CLSVOF CFD 고충실 데이터 생성</li>
+        </ul>
     </div>
     <div class="axis-card axis-4">
         <span class="axis-badge">AXIS 04</span>
-        <h3>AI물리</h3>
-        <p class="axis-summary">XPINN·DeepONet으로 정확도 5%·100배 가속·역설계 파운데이션 모델 완성</p>
+        <h3>극한 벤치마크</h3>
+        <p class="axis-summary">세계 최난도 물리로 알고리즘 성능 검증</p>
+        <ul>
+            <li>DNB/CHF 전이 (밀도비 1000:1)</li>
+            <li>HBM 액침냉각 · SMR 연료봉 비등</li>
+            <li>문헌 + 자체 실험 데이터셋 활용</li>
+        </ul>
     </div>
 </div>

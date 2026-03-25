@@ -13,10 +13,10 @@ async function loadComponent(id, file) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await loadComponent("header", "components/header.html");
-    await loadComponent("hero", "components/hero.html");
-    await loadComponent("systems", "components/systems.html");
-    await loadComponent("axes", "components/axes.html");
+    await loadComponent("header",   "components/header.html");
+    await loadComponent("hero",     "components/hero.html");
+    await loadComponent("systems",  "components/systems.html");
+    await loadComponent("axes",     "components/axes.html");
     await loadComponent("pipeline", "components/pipeline.html");
-    await loadComponent("footer", "components/footer.html");
+    await loadComponent("footer",   "components/footer.html");
 });
