@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haein Jung — Thermal-Fluid Dynamics & Physics-Informed AI</title>
+<title>Haein Jung — Real-Time Physical Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -283,12 +283,15 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
 <section id="about">
   <div class="about-inner">
     <div>
-      <div class="about-tag">researcher · thermal-fluid dynamics · physics-informed ai</div>
+      <div class="about-tag">building real-time physical intelligence</div>
       <div class="about-name">Haein Jung</div>
       <span class="about-name-kr">정 해 인</span>
       <p class="about-desc">
-        I am a researcher in <strong>thermal-fluid dynamics</strong> working at the intersection of experimental heat transfer, numerical simulation, and <em>Physics-Informed Machine Learning</em>.<br><br>
-        My research focuses on two-phase flow boiling, high-power laser thermal management, and the development of Physics-Informed Neural Operators as fast surrogates for classical CFD and FEM — with the longer-term goal of enabling real-time process intelligence in advanced manufacturing systems.
+        Physical systems are governed by PDEs, but classical simulation is too slow for real-time use.
+        
+        Physics-informed operators make complex systems computationally tractable while preserving physical structure.
+        
+        The goal is real-time physical intelligence for engineering, energy, and manufacturing.
       </p>
       <div class="about-links">
         <a href="#research" class="btn-solid">Research</a>
@@ -309,7 +312,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       </div>
       <div class="info-row">
         <span class="info-key">field</span>
-        <span class="info-val">Thermal-Fluid Dynamics<br>Physics-Informed AI</span>
+        <span class="info-val">Real-Time Physical Modeling<br>Physics-Informed AI</span>        
       </div>
       <div class="info-row">
         <span class="info-key">papers</span>
@@ -333,15 +336,23 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
     <div class="sec-header reveal">
       <div class="sec-num">§ 01</div>
       <div>
-        <h2 class="sec-title">Research<br><em>Areas</em></h2>
-        <p class="sec-sub">My work spans experimental and numerical thermal-fluid dynamics, with an active research thread developing Physics-Informed Machine Learning approaches for thermal systems.</p>
+        <h2 class="sec-title">Research<br><em>Program</em></h2>
+          
+        <p class="sec-sub">This research program is organized around one question: how can PDE-governed physical systems be modeled fast enough for real-time prediction, control, and design?</p>
       </div>
     </div>
-
+    <div class="res-card full">
+                <div class="rc-num">00 <span class="rc-badge active">core problem</span></div>
+                <div class="rc-title">Real-Time Modeling of PDE-Governed Physical Systems</div>
+                <p class="rc-body">
+                  Many engineering systems are governed by partial differential equations, but classical CFD and FEM solvers are too slow for real-time use.
+                  The objective is to build models that retain physical consistency while enabling fast inference for control, prediction, and design.
+                </p>
+              </div>
     <div class="res-grid reveal">
       <div class="res-card">
         <div class="rc-num">01 <span class="rc-badge active">active</span></div>
-        <div class="rc-title">Two-Phase Flow Boiling &amp; Heat Transfer</div>
+        <div class="rc-title">Application Domain — Two-Phase Thermal Systems</div>
         <p class="rc-body">Experimental and numerical investigation of subcooled and saturated flow boiling in microchannels, concentric annuli, and finned geometries. Focus on instability mechanisms — flow oscillation frequency, onset of nucleate boiling — and their mechanistic modelling. Recent applications include thermal management of ultra-fast EV charging cables.</p>
         <div class="rc-tags">
           <span class="rc-tag">flow boiling</span>
@@ -352,7 +363,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       </div>
       <div class="res-card">
         <div class="rc-num">02 <span class="rc-badge active">active</span></div>
-        <div class="rc-title">High-Power Laser Thermal Management</div>
+        <div class="rc-title">Application Domain — High-Power Photonic Systems</div>
         <p class="rc-body">Thermal analysis of liquid-immersion-cooled solid-state laser gain media (Nd:YLF, Nd:YAG) under continuous-wave and pulsed operation. Coupled thermal stress and cooling loop pressure drop modelling in collaboration with defence and industrial photonics laboratories.</p>
         <div class="rc-tags">
           <span class="rc-tag">laser cooling</span>
@@ -364,7 +375,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       <div class="res-card full">
         <div class="rc-num">03 <span class="rc-badge dev">in development</span></div>
         <div class="rc-title">Physics-Informed Neural Operators for Thermal-Fluid Systems</div>
-        <p class="rc-body">I am developing Physics-Informed Neural Operator approaches — building on DeepONet and related architectures — that embed thermal-fluid governing equations (energy equation, Navier–Stokes, constitutive relations) directly into the machine learning training objective. The aim is surrogate models that generalise across boundary conditions, retain physical consistency by construction, and are fast enough to operate inside a real-time control loop. Validation draws on my own experimental datasets from flow boiling and laser cooling studies. This work is the technical foundation of ThermalMind AI.</p>
+        <p class="rc-body">This work develops physics-informed neural operators that embed governing equations, boundary conditions, and constitutive structure directly into the learning process. The goal is fast, physically consistent surrogate modeling across varying operating conditions.</p>
         <div class="rc-tags">
           <span class="rc-tag">PINN</span>
           <span class="rc-tag">DeepONet</span>
@@ -383,7 +394,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
     <div class="sec-header reveal">
       <div class="sec-num">§ 02</div>
       <div>
-        <h2 class="sec-title">Selected<br><em>Publications</em></h2>
+        <h2 class="sec-title">Selected<br><em>Work</em></h2>
         <p class="sec-sub">7 SCIE-indexed publications in thermal-fluid dynamics. Physics-Informed AI work is currently in preparation.</p>
       </div>
     </div>
@@ -463,35 +474,39 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
     <div class="sec-header reveal">
       <div class="sec-num">§ 03</div>
       <div>
-        <h2 class="sec-title">ThermalMind AI —<br><em>Research into Practice</em></h2>
-        <p class="sec-sub">ThermalMind AI is my effort to translate this research into deployable technology — Physics-Informed Neural Operators as commercial surrogates for thermal simulation in industrial systems.</p>
+        <h2 class="sec-title">ThermalMind AI</h2>
+        <p class="sec-sub">ThermalMind AI explores physics-informed operators as a foundation for real-time thermal simulation, control, and digital twins in industrial systems.</p>
       </div>
     </div>
 
     <div class="tm-inner reveal">
       <div class="tm-left">
-        <p class="tm-desc">The core premise is straightforward: <em>thermal simulation latency is the binding constraint on process quality</em> in data centres, semiconductor manufacturing, and high-power photonics. Classical CFD and FEM solvers are accurate but too slow to operate inside a control loop. I am building Physics-Informed Neural Operators — trained on my own experimental and numerical datasets — that close this gap.</p>
-
+        <p class="tm-desc">
+          The core premise is straightforward: <em>thermal simulation latency is the binding constraint on process quality</em> in data centres, semiconductor manufacturing, and high-power photonics. Classical CFD and FEM solvers are accurate but too slow to operate inside a control loop. Physics-informed neural operators close this gap.
+        </p>
+    
         <div class="tm-products">
           <div class="tm-product">
-            <span class="tm-prod-tag dev">in dev.</span>
+            <span class="tm-prod-tag dev">capability</span>
             <div class="tm-prod-info">
-              <div class="tm-prod-name">ThermalAI Cloud</div>
-              <div class="tm-prod-desc">REST API · Physics-Informed DeepONet inference · validated against experimental boiling and laser cooling datasets</div>
+              <div class="tm-prod-name">Real-Time PDE Inference</div>
+              <div class="tm-prod-desc">Fast surrogate modeling for thermal and flow systems under varying boundary conditions.</div>
             </div>
           </div>
+    
           <div class="tm-product">
-            <span class="tm-prod-tag plan">planned</span>
+            <span class="tm-prod-tag dev">capability</span>
             <div class="tm-prod-info">
-              <div class="tm-prod-name">ThermalAI Edge</div>
-              <div class="tm-prod-desc">Compressed neural operator for NPU/FPGA · on-device thermal inference · &lt;10ms latency target</div>
+              <div class="tm-prod-name">Physics-Constrained Learning</div>
+              <div class="tm-prod-desc">Operator learning with embedded governing equations, boundary conditions, and physical priors.</div>
             </div>
           </div>
+    
           <div class="tm-product">
-            <span class="tm-prod-tag plan">planned</span>
+            <span class="tm-prod-tag dev">capability</span>
             <div class="tm-prod-info">
-              <div class="tm-prod-name">ThermalAI Kit</div>
-              <div class="tm-prod-desc">Hardware + software PoC bundle · rapid on-site evaluation for industrial partners</div>
+              <div class="tm-prod-name">Industrial Digital Twin Acceleration</div>
+              <div class="tm-prod-desc">Reduced-order intelligence for thermal control, design iteration, and process optimization.</div>
             </div>
           </div>
         </div>
@@ -565,9 +580,9 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
           </div>
         </div>
         <div class="cv-item">
-          <div class="cv-year">planned</div>
+          <div class="cv-year">current</div>
           <div class="cv-content">
-            <div class="cv-title">Founder, ThermalMind AI</div>
+            <div class="cv-title">ThermalMind AI — Physics-Informed AI Systems (in development)</div>
             <div class="cv-place">Physics-Informed AI for thermal-fluid systems<br>Pre-incorporation stage</div>
           </div>
         </div>
@@ -590,10 +605,10 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
           </div>
         </div>
         <div class="cv-item">
-          <div class="cv-year">planned</div>
+          <div class="cv-year">current</div>
           <div class="cv-content">
-            <div class="cv-title">International Research Collaboration</div>
-            <div class="cv-place">Physics-Informed Neural Operators<br>Operator learning · thermal applications</div>
+            <div class="cv-title">Research Direction — Physics-Informed Operator Learning</div>
+            <div class="cv-place">Scientific machine learning · operator learning · thermal applications</div>
           </div>
         </div>
       </div>
@@ -611,7 +626,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         <div class="contact-rows">
           <div class="c-row">
             <span class="c-key">email</span>
-            <span class="c-val">haeinjuung@gm.gist.ac.kr</span>
+            <span class="c-val">haeinjung@gm.gist.ac.kr</span>
           </div>
           <div class="c-row">
             <span class="c-key">location</span>
