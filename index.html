@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haein Jung — Real-Time Physical Intelligence</title>
+<title>Haein Jung — AI for Hidden Physical Systems</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -18,27 +18,33 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
 ::selection{background:var(--blue);color:white;}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:var(--paper2);}
 ::-webkit-scrollbar-thumb{background:var(--rule);}
 
 /* ── NAV ── */
-nav {
+nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   background:rgba(245,244,240,0.94);backdrop-filter:blur(16px);
   border-bottom:1px solid var(--rule);
   padding:0 56px;height:52px;
   display:flex;align-items:center;justify-content:space-between;
 }
-.nav-name {
+.nav-name{
   font-family:var(--serif);font-size:16px;font-weight:500;
   font-style:italic;color:var(--ink);text-decoration:none;
   letter-spacing:-0.01em;
 }
-.nav-links {display:flex;}
-.nav-link {
+.nav-links{display:flex;}
+.nav-link{
   font-family:var(--mono);font-size:10px;letter-spacing:0.06em;
   color:var(--ink3);text-decoration:none;padding:0 16px;
   height:52px;display:flex;align-items:center;
@@ -46,7 +52,7 @@ nav {
 }
 .nav-link:first-child{border-left:1px solid var(--rule);}
 .nav-link:hover{color:var(--ink);background:var(--paper2);}
-.nav-contact {
+.nav-contact{
   font-family:var(--mono);font-size:10px;letter-spacing:0.06em;
   padding:6px 16px;border:1px solid var(--ink3);color:var(--ink3);
   text-decoration:none;transition:border-color .15s,color .15s;
@@ -54,48 +60,48 @@ nav {
 .nav-contact:hover{border-color:var(--blue);color:var(--blue);}
 
 /* ── HERO / ABOUT ── */
-#about {
+#about{
   padding:130px 56px 96px;
   border-bottom:1px solid var(--rule);
   min-height:100vh;display:flex;align-items:center;
 }
-.about-inner {
+.about-inner{
   max-width:1100px;width:100%;
   display:grid;grid-template-columns:1fr 380px;
   gap:80px;align-items:start;
 }
-.about-tag {
+.about-tag{
   font-family:var(--mono);font-size:9.5px;letter-spacing:0.14em;
   color:var(--blue2);margin-bottom:20px;
   display:flex;align-items:center;gap:10px;
 }
 .about-tag::before{content:'';width:22px;height:1px;background:var(--blue2);}
-.about-name {
+.about-name{
   font-family:var(--serif);
   font-size:clamp(44px,5vw,72px);
   font-weight:400;line-height:0.96;letter-spacing:-0.025em;
   margin-bottom:6px;
 }
-.about-name-kr {
+.about-name-kr{
   font-family:var(--serif);font-size:clamp(18px,2vw,26px);
   font-weight:400;color:var(--ink3);letter-spacing:0.02em;
   margin-bottom:32px;display:block;
 }
-.about-desc {
-  font-size:15px;font-weight:300;line-height:1.8;color:var(--ink2);
-  max-width:520px;margin-bottom:36px;
+.about-desc{
+  font-size:15px;font-weight:300;line-height:1.82;color:var(--ink2);
+  max-width:570px;margin-bottom:36px;
   border-left:2px solid var(--rule);padding-left:20px;
 }
 .about-desc em{font-style:italic;color:var(--ink3);}
 .about-desc strong{font-weight:500;color:var(--ink);}
 .about-links{display:flex;gap:10px;flex-wrap:wrap;}
-.btn-solid {
+.btn-solid{
   font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;
   padding:10px 24px;background:var(--ink);color:var(--paper);
   text-decoration:none;transition:background .18s;
 }
 .btn-solid:hover{background:var(--blue);}
-.btn-ghost {
+.btn-ghost{
   font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;
   padding:10px 24px;border:1px solid var(--rule);color:var(--ink3);
   text-decoration:none;transition:border-color .18s,color .18s;
@@ -103,26 +109,26 @@ nav {
 .btn-ghost:hover{border-color:var(--ink);color:var(--ink);}
 
 /* About right — info card */
-.info-card {
+.info-card{
   background:var(--paper2);border:1px solid var(--rule);
   padding:36px 32px;
 }
-.info-label {
+.info-label{
   font-family:var(--mono);font-size:8.5px;letter-spacing:0.14em;
   color:var(--ink4);text-transform:lowercase;
   border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:20px;
 }
-.info-row {
+.info-row{
   display:flex;gap:14px;padding:12px 0;
   border-bottom:1px solid rgba(212,209,198,0.5);
   align-items:flex-start;
 }
 .info-row:last-child{border-bottom:none;}
-.info-key {
+.info-key{
   font-family:var(--mono);font-size:8.5px;letter-spacing:0.1em;
   color:var(--ink4);min-width:72px;padding-top:2px;flex-shrink:0;
 }
-.info-val {
+.info-val{
   font-size:12.5px;font-weight:300;color:var(--ink2);line-height:1.55;
 }
 .info-val a{color:var(--blue2);text-decoration:none;}
@@ -135,7 +141,7 @@ section{border-bottom:1px solid var(--rule);padding:88px 56px;}
 .sec-num{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:var(--ink4);padding-top:5px;}
 .sec-title{font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);font-weight:500;line-height:1.1;letter-spacing:-0.01em;}
 .sec-title em{font-style:italic;color:var(--blue2);}
-.sec-sub{font-size:13.5px;font-weight:300;color:var(--ink3);line-height:1.72;margin-top:10px;max-width:520px;}
+.sec-sub{font-size:13.5px;font-weight:300;color:var(--ink3);line-height:1.72;margin-top:10px;max-width:620px;}
 
 /* ── RESEARCH ── */
 #research{background:var(--paper);}
@@ -172,45 +178,45 @@ section{border-bottom:1px solid var(--rule);padding:88px 56px;}
 .pub-badge.scie{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
 .pub-badge.prep{border-color:var(--green);color:var(--green);background:rgba(42,107,63,0.04);}
 
-/* ── THERMALMIND ── */
-#thermalmind{background:var(--paper);}
-.tm-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.tm-left{}
-.tm-desc{font-size:14px;font-weight:300;line-height:1.78;color:var(--ink3);margin-bottom:32px;max-width:460px;}
-.tm-products{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);}
-.tm-product{background:var(--paper);padding:20px 24px;display:flex;gap:16px;align-items:flex-start;transition:background .15s;}
-.tm-product:hover{background:var(--paper2);}
-.tm-prod-tag{font-family:var(--mono);font-size:8px;letter-spacing:0.08em;padding:3px 9px;border:1px solid var(--rule);color:var(--ink4);flex-shrink:0;margin-top:2px;}
-.tm-prod-tag.dev{border-color:var(--blue2);color:var(--blue2);background:var(--blue-light);}
-.tm-prod-tag.plan{border-color:var(--rule);color:var(--ink4);}
-.tm-prod-info{}
-.tm-prod-name{font-family:var(--serif);font-size:15px;font-weight:500;margin-bottom:3px;letter-spacing:-0.01em;}
-.tm-prod-desc{font-size:12px;font-weight:300;color:var(--ink3);line-height:1.6;}
+/* ── HIDDENFIELD ── */
+#hiddenfield{background:var(--paper);}
+.hf-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.hf-desc{font-size:14px;font-weight:300;line-height:1.8;color:var(--ink3);margin-bottom:32px;max-width:500px;}
+.hf-products{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);}
+.hf-product{background:var(--paper);padding:20px 24px;display:flex;gap:16px;align-items:flex-start;transition:background .15s;}
+.hf-product:hover{background:var(--paper2);}
+.hf-prod-tag{font-family:var(--mono);font-size:8px;letter-spacing:0.08em;padding:3px 9px;border:1px solid var(--rule);color:var(--ink4);flex-shrink:0;margin-top:2px;}
+.hf-prod-tag.dev{border-color:var(--blue2);color:var(--blue2);background:var(--blue-light);}
+.hf-prod-name{font-family:var(--serif);font-size:15px;font-weight:500;margin-bottom:3px;letter-spacing:-0.01em;}
+.hf-prod-desc{font-size:12px;font-weight:300;color:var(--ink3);line-height:1.6;}
 
-.tm-right{}
-.tm-eq{background:var(--paper2);border:1px solid var(--rule);padding:32px;}
-.tm-eq-label{font-family:var(--mono);font-size:8.5px;letter-spacing:0.12em;color:var(--ink4);border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:20px;}
-.tm-eq-body{font-family:var(--serif);font-size:15px;line-height:2.4;color:var(--ink2);}
-.tm-eq-body .hl{color:var(--blue2);font-style:italic;}
-.tm-eq-body .hl2{color:var(--red);}
-.tm-eq-body .hl3{color:var(--green);font-style:italic;}
-.tm-eq-body .cm{font-family:var(--mono);font-size:9.5px;color:var(--ink4);display:block;margin-bottom:2px;}
-.tm-eq-note{border-top:1px solid var(--rule);padding-top:12px;margin-top:16px;font-family:var(--mono);font-size:8.5px;color:var(--ink4);line-height:1.7;}
-.tm-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1px;}
-.tm-stat-box{background:var(--paper2);padding:22px 20px;}
-.tm-stat-val{font-family:var(--serif);font-size:34px;font-weight:400;font-style:italic;color:var(--blue);line-height:1;margin-bottom:4px;}
-.tm-stat-label{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--ink4);line-height:1.5;}
-.tm-stat-note{font-family:var(--mono);font-size:8.5px;color:var(--ink4);margin-top:2px;font-style:italic;}
+.hf-panel{background:var(--paper2);border:1px solid var(--rule);padding:32px;}
+.hf-panel-label{
+  font-family:var(--mono);font-size:8.5px;letter-spacing:0.12em;color:var(--ink4);
+  border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:20px;
+}
+.hf-panel-body{font-size:13px;font-weight:300;line-height:1.85;color:var(--ink2);}
+.hf-panel-body strong{font-weight:500;color:var(--ink);}
+.hf-panel-note{
+  border-top:1px solid var(--rule);padding-top:12px;margin-top:16px;
+  font-family:var(--mono);font-size:8.5px;color:var(--ink4);line-height:1.7;
+}
+.hf-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1px;}
+.hf-stat-box{background:var(--paper2);padding:22px 20px;}
+.hf-stat-val{
+  font-family:var(--serif);font-size:34px;font-weight:400;font-style:italic;
+  color:var(--blue);line-height:1;margin-bottom:4px;
+}
+.hf-stat-label{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--ink4);line-height:1.5;}
+.hf-stat-note{font-family:var(--mono);font-size:8.5px;color:var(--ink4);margin-top:2px;font-style:italic;}
 
 /* ── CV ── */
 #cv-section{background:var(--paper2);}
 .cv-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
-.cv-col{}
 .cv-col-title{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--ink4);border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:0;}
 .cv-item{padding:18px 0;border-bottom:1px solid rgba(212,209,198,0.5);display:grid;grid-template-columns:80px 1fr;gap:16px;}
 .cv-item:last-child{border-bottom:none;}
 .cv-year{font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:0.04em;padding-top:2px;}
-.cv-content{}
 .cv-title{font-size:13px;font-weight:500;line-height:1.3;margin-bottom:2px;}
 .cv-place{font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:0.04em;line-height:1.5;}
 
@@ -222,38 +228,55 @@ section{border-bottom:1px solid var(--rule);padding:88px 56px;}
 .contact-body{font-size:13.5px;font-weight:300;line-height:1.75;color:var(--ink3);margin-bottom:28px;}
 .contact-rows{display:flex;flex-direction:column;gap:14px;}
 .c-row{display:flex;gap:14px;}
-.c-key{font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;color:var(--ink4);min-width:60px;padding-top:2px;}
+.c-key{font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;color:var(--ink4);min-width:72px;padding-top:2px;}
 .c-val{font-size:13px;color:var(--ink2);line-height:1.55;}
 .contact-form{background:var(--paper2);border:1px solid var(--rule);padding:36px;}
 .form-title{font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:24px;letter-spacing:-0.01em;}
 .field{margin-bottom:16px;}
 .field-label{font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;color:var(--ink4);display:block;margin-bottom:6px;}
-.field-input,.field-select,.field-textarea{width:100%;background:var(--paper);border:1px solid var(--rule);color:var(--ink);padding:10px 13px;font-family:var(--sans);font-size:13px;font-weight:300;outline:none;transition:border-color .15s;appearance:none;}
+.field-input,.field-select,.field-textarea{
+  width:100%;background:var(--paper);border:1px solid var(--rule);color:var(--ink);
+  padding:10px 13px;font-family:var(--sans);font-size:13px;font-weight:300;outline:none;
+  transition:border-color .15s;appearance:none;
+}
 .field-input:focus,.field-select:focus,.field-textarea:focus{border-color:var(--blue);}
 .field-input::placeholder,.field-textarea::placeholder{color:var(--ink4);}
 .field-textarea{resize:vertical;min-height:80px;}
 .field-select{cursor:pointer;}
 .field-select option{background:var(--paper);color:var(--ink);}
-.form-submit{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;padding:11px 26px;background:var(--ink);color:var(--paper);border:none;cursor:pointer;transition:background .15s;}
+.form-submit{
+  font-family:var(--mono);font-size:10px;letter-spacing:0.08em;padding:11px 26px;
+  background:var(--ink);color:var(--paper);border:none;cursor:pointer;transition:background .15s;
+}
 .form-submit:hover{background:var(--blue);}
 
 /* ── FOOTER ── */
-footer{border-top:1px solid var(--rule);padding:24px 56px;display:flex;align-items:center;justify-content:space-between;background:var(--paper);}
+footer{
+  border-top:1px solid var(--rule);padding:24px 56px;
+  display:flex;align-items:center;justify-content:space-between;background:var(--paper);
+}
 .foot-name{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--ink3);}
 .foot-copy{font-family:var(--mono);font-size:9.5px;color:var(--ink4);letter-spacing:0.06em;}
 .foot-links{display:flex;gap:18px;}
-.foot-links a{font-family:var(--mono);font-size:9.5px;color:var(--ink4);text-decoration:none;letter-spacing:0.06em;transition:color .12s;}
+.foot-links a{
+  font-family:var(--mono);font-size:9.5px;color:var(--ink4);text-decoration:none;
+  letter-spacing:0.06em;transition:color .12s;
+}
 .foot-links a:hover{color:var(--ink);}
 
 /* ── REVEAL ── */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1);}
+.reveal{
+  opacity:0;transform:translateY(14px);
+  transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1);
+}
 .reveal.v{opacity:1;transform:none;}
 canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
 
 @media(max-width:860px){
-  nav{padding:0 20px;} .nav-links{display:none;}
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
   section,#about{padding:72px 20px;}
-  .about-inner,.tm-inner,.contact-inner,.cv-grid{grid-template-columns:1fr;}
+  .about-inner,.hf-inner,.contact-inner,.cv-grid{grid-template-columns:1fr;}
   .info-card{display:none;}
   .sec-header{grid-template-columns:1fr;gap:8px;}
   .res-grid{grid-template-columns:1fr;}
@@ -267,36 +290,35 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
 
 <canvas id="bg"></canvas>
 
-<!-- NAV -->
 <nav>
   <a href="#about" class="nav-name">Haein Jung</a>
   <div class="nav-links">
     <a href="#research" class="nav-link">research</a>
     <a href="#publications" class="nav-link">publications</a>
-    <a href="#thermalmind" class="nav-link">thermalmind ai</a>
+    <a href="#hiddenfield" class="nav-link">hiddenfield</a>
     <a href="#cv-section" class="nav-link">cv</a>
   </div>
   <a href="#contact" class="nav-contact">contact</a>
 </nav>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="about-inner">
     <div>
-      <div class="about-tag">building real-time physical intelligence</div>
+      <div class="about-tag">AI for hidden physical systems</div>
       <div class="about-name">Haein Jung</div>
       <span class="about-name-kr">정 해 인</span>
       <p class="about-desc">
-        Physical systems are governed by PDEs, but classical simulation is too slow for real-time use.
-        
-        Physics-informed operators make complex systems computationally tractable while preserving physical structure.
-        
-        The goal is real-time physical intelligence for engineering, energy, and manufacturing.
+        Most physical systems cannot be fully observed. Their performance and failure are governed by
+        <strong>hidden physical states</strong> such as temperature fields, stress distributions, and interfacial dynamics.
+        <br><br>
+        My work develops AI models that <strong>infer these hidden states</strong> from limited observations, enabling real-time prediction of performance, failure risk, and safe operating limits.
+        <br><br>
+        The goal is to make complex physical systems <em>understandable, predictable, and controllable</em> in real time.
       </p>
       <div class="about-links">
         <a href="#research" class="btn-solid">Research</a>
         <a href="#publications" class="btn-ghost">Publications →</a>
-        <a href="#thermalmind" class="btn-ghost">ThermalMind AI →</a>
+        <a href="#hiddenfield" class="btn-ghost">HiddenField →</a>
       </div>
     </div>
 
@@ -308,19 +330,19 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       </div>
       <div class="info-row">
         <span class="info-key">education</span>
-        <span class="info-val">Ph.D., Mechanical Engineering<br>GIST (Gwangju Institute of<br>Science and Technology)</span>
+        <span class="info-val">Ph.D., Mechanical Engineering<br>GIST (Gwangju Institute of Science and Technology)</span>
       </div>
       <div class="info-row">
         <span class="info-key">field</span>
-        <span class="info-val">Real-Time Physical Modeling<br>Physics-Informed AI</span>        
+        <span class="info-val">Scientific Machine Learning<br>Physical Hidden-State Inference</span>
       </div>
       <div class="info-row">
         <span class="info-key">papers</span>
-        <span class="info-val">7 SCIE (5 first-author)</span>
+        <span class="info-val">7 SCIE papers<br>5 first-author</span>
       </div>
       <div class="info-row">
-        <span class="info-key">collab.</span>
-        <span class="info-val">GIST APRI · LIG Nex1</span>
+        <span class="info-key">focus</span>
+        <span class="info-val">Boiling · Laser · Failure Prediction</span>
       </div>
       <div class="info-row">
         <span class="info-key">email</span>
@@ -330,72 +352,88 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   </div>
 </section>
 
-<!-- RESEARCH -->
 <section id="research">
   <div class="sec-inner">
     <div class="sec-header reveal">
       <div class="sec-num">§ 01</div>
       <div>
         <h2 class="sec-title">Research<br><em>Program</em></h2>
-          
-        <p class="sec-sub">This research program is organized around one question: how can PDE-governed physical systems be modeled fast enough for real-time prediction, control, and design?</p>
+        <p class="sec-sub">
+          This research program is organized around one question:
+          how can hidden physical states be inferred from partial observations,
+          and used to predict performance, failure, and safe operating limits in complex systems?
+        </p>
       </div>
     </div>
-    <div class="res-card full">
-                <div class="rc-num">00 <span class="rc-badge active">core problem</span></div>
-                <div class="rc-title">Real-Time Modeling of PDE-Governed Physical Systems</div>
-                <p class="rc-body">
-                  Many engineering systems are governed by partial differential equations, but classical CFD and FEM solvers are too slow for real-time use.
-                  The objective is to build models that retain physical consistency while enabling fast inference for control, prediction, and design.
-                </p>
-              </div>
+
     <div class="res-grid reveal">
+      <div class="res-card full">
+        <div class="rc-num">00 <span class="rc-badge active">core problem</span></div>
+        <div class="rc-title">Hidden-State Inference in Physical Systems</div>
+        <p class="rc-body">
+          Most engineering systems are only partially observable. However, critical outcomes—performance degradation, instability onset, and failure—are governed by internal states that cannot be directly measured. My work aims to infer these hidden states using physics-informed learning, inverse modeling, and operator-based methods.
+        </p>
+        <div class="rc-tags">
+          <span class="rc-tag">inverse problem</span>
+          <span class="rc-tag">latent state inference</span>
+          <span class="rc-tag">physics-informed learning</span>
+          <span class="rc-tag">operator learning</span>
+        </div>
+      </div>
+
       <div class="res-card">
         <div class="rc-num">01 <span class="rc-badge active">active</span></div>
-        <div class="rc-title">Application Domain — Two-Phase Thermal Systems</div>
-        <p class="rc-body">Experimental and numerical investigation of subcooled and saturated flow boiling in microchannels, concentric annuli, and finned geometries. Focus on instability mechanisms — flow oscillation frequency, onset of nucleate boiling — and their mechanistic modelling. Recent applications include thermal management of ultra-fast EV charging cables.</p>
+        <div class="rc-title">Use Case I — Boiling and Two-Phase Systems</div>
+        <p class="rc-body">
+          Experimental and numerical investigation of subcooled and saturated flow boiling in microchannels, concentric annuli, and finned geometries. Current focus includes onset of nucleate boiling, bubble dynamics, flow instability, and mechanistic interpretation of failure precursors in phase-change systems.
+        </p>
         <div class="rc-tags">
-          <span class="rc-tag">flow boiling</span>
+          <span class="rc-tag">boiling</span>
           <span class="rc-tag">two-phase</span>
-          <span class="rc-tag">experimental</span>
-          <span class="rc-tag">microchannel</span>
+          <span class="rc-tag">ONB</span>
+          <span class="rc-tag">instability</span>
         </div>
       </div>
+
       <div class="res-card">
         <div class="rc-num">02 <span class="rc-badge active">active</span></div>
-        <div class="rc-title">Application Domain — High-Power Photonic Systems</div>
-        <p class="rc-body">Thermal analysis of liquid-immersion-cooled solid-state laser gain media (Nd:YLF, Nd:YAG) under continuous-wave and pulsed operation. Coupled thermal stress and cooling loop pressure drop modelling in collaboration with defence and industrial photonics laboratories.</p>
+        <div class="rc-title">Use Case II — High-Power Laser Systems</div>
+        <p class="rc-body">
+          Thermo-optical analysis of liquid-immersion-cooled solid-state laser systems under high heat flux. Focus on hidden states such as internal temperature fields, thermal stress, refractive index variation, and their effects on beam quality degradation, safe operating limits, and fracture risk.
+        </p>
         <div class="rc-tags">
-          <span class="rc-tag">laser cooling</span>
-          <span class="rc-tag">Nd:YLF</span>
-          <span class="rc-tag">thermal stress</span>
-          <span class="rc-tag">FEM</span>
+          <span class="rc-tag">laser</span>
+          <span class="rc-tag">thermo-optics</span>
+          <span class="rc-tag">beam quality</span>
+          <span class="rc-tag">failure</span>
         </div>
       </div>
+
       <div class="res-card full">
         <div class="rc-num">03 <span class="rc-badge dev">in development</span></div>
-        <div class="rc-title">Physics-Informed Neural Operators for Thermal-Fluid Systems</div>
-        <p class="rc-body">This work develops physics-informed neural operators that embed governing equations, boundary conditions, and constitutive structure directly into the learning process. The goal is fast, physically consistent surrogate modeling across varying operating conditions.</p>
+        <div class="rc-title">Physics-Informed AI for Real-Time Physical Decision Making</div>
+        <p class="rc-body">
+          Ongoing work develops physics-informed neural operators and inverse learning frameworks to predict hidden states, performance, and failure conditions from sparse observations. The long-term goal is real-time physical decision making for design, operation, and control.
+        </p>
         <div class="rc-tags">
           <span class="rc-tag">PINN</span>
           <span class="rc-tag">DeepONet</span>
           <span class="rc-tag">neural operator</span>
-          <span class="rc-tag">surrogate modelling</span>
-          <span class="rc-tag">CFD acceleration</span>
+          <span class="rc-tag">surrogate modeling</span>
+          <span class="rc-tag">real-time inference</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
 <section id="publications">
   <div class="sec-inner">
     <div class="sec-header reveal">
       <div class="sec-num">§ 02</div>
       <div>
         <h2 class="sec-title">Selected<br><em>Work</em></h2>
-        <p class="sec-sub">7 SCIE-indexed publications in thermal-fluid dynamics. Physics-Informed AI work is currently in preparation.</p>
+        <p class="sec-sub">Selected publications in thermal-fluid dynamics and physical systems modeling. Physics-informed AI work is currently in preparation.</p>
       </div>
     </div>
 
@@ -408,6 +446,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">2024</div>
         <div>
@@ -416,6 +455,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">2024</div>
         <div>
@@ -424,6 +464,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">2023</div>
         <div>
@@ -432,6 +473,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">2020</div>
         <div>
@@ -440,6 +482,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">2020</div>
         <div>
@@ -448,6 +491,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">2018</div>
         <div>
@@ -456,6 +500,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         </div>
         <div class="pub-badge scie">SCIE</div>
       </div>
+
       <div class="pub-item">
         <div class="pub-year">in prep.</div>
         <div>
@@ -468,83 +513,81 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   </div>
 </section>
 
-<!-- THERMALMIND AI -->
-<section id="thermalmind">
+<section id="hiddenfield">
   <div class="sec-inner">
     <div class="sec-header reveal">
       <div class="sec-num">§ 03</div>
       <div>
-        <h2 class="sec-title">ThermalMind AI</h2>
-        <p class="sec-sub">ThermalMind AI explores physics-informed operators as a foundation for real-time thermal simulation, control, and digital twins in industrial systems.</p>
+        <h2 class="sec-title">HiddenField</h2>
+        <p class="sec-sub">AI for revealing hidden physical states and predicting performance and failure in real-world systems.</p>
       </div>
     </div>
 
-    <div class="tm-inner reveal">
-      <div class="tm-left">
-        <p class="tm-desc">
-          The core premise is straightforward: <em>thermal simulation latency is the binding constraint on process quality</em> in data centres, semiconductor manufacturing, and high-power photonics. Classical CFD and FEM solvers are accurate but too slow to operate inside a control loop. Physics-informed neural operators close this gap.
+    <div class="hf-inner reveal">
+      <div>
+        <p class="hf-desc">
+          HiddenField explores AI models that infer unobservable internal states in physical systems from sparse observations.
+          Instead of replacing physics, the goal is to combine data, governing equations, and physical constraints to make real-time prediction, diagnosis, and decision making possible.
         </p>
-    
-        <div class="tm-products">
-          <div class="tm-product">
-            <span class="tm-prod-tag dev">capability</span>
-            <div class="tm-prod-info">
-              <div class="tm-prod-name">Real-Time PDE Inference</div>
-              <div class="tm-prod-desc">Fast surrogate modeling for thermal and flow systems under varying boundary conditions.</div>
+
+        <div class="hf-products">
+          <div class="hf-product">
+            <span class="hf-prod-tag dev">input</span>
+            <div>
+              <div class="hf-prod-name">System Conditions</div>
+              <div class="hf-prod-desc">Geometry, operating conditions, and sparse sensor or imaging data.</div>
             </div>
           </div>
-    
-          <div class="tm-product">
-            <span class="tm-prod-tag dev">capability</span>
-            <div class="tm-prod-info">
-              <div class="tm-prod-name">Physics-Constrained Learning</div>
-              <div class="tm-prod-desc">Operator learning with embedded governing equations, boundary conditions, and physical priors.</div>
+
+          <div class="hf-product">
+            <span class="hf-prod-tag dev">output</span>
+            <div>
+              <div class="hf-prod-name">Hidden State Inference</div>
+              <div class="hf-prod-desc">Temperature fields, stress distributions, interfacial dynamics, and other latent physical variables.</div>
             </div>
           </div>
-    
-          <div class="tm-product">
-            <span class="tm-prod-tag dev">capability</span>
-            <div class="tm-prod-info">
-              <div class="tm-prod-name">Industrial Digital Twin Acceleration</div>
-              <div class="tm-prod-desc">Reduced-order intelligence for thermal control, design iteration, and process optimization.</div>
+
+          <div class="hf-product">
+            <span class="hf-prod-tag dev">output</span>
+            <div>
+              <div class="hf-prod-name">Performance & Failure Prediction</div>
+              <div class="hf-prod-desc">Output limits, instability onset, fracture risk, and safe operating ranges.</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="tm-right">
-        <div class="tm-eq">
-          <div class="tm-eq-label">physics-informed loss — thermal energy equation</div>
-          <div class="tm-eq-body">
-            <span class="cm">// governing equation</span>
-            ρc<sub>p</sub><span class="hl3">∂T/∂t</span> = <span class="hl">∇·(k∇T)</span> + <span class="hl2">Q̇</span>
+      <div>
+        <div class="hf-panel">
+          <div class="hf-panel-label">current use cases</div>
+          <div class="hf-panel-body">
+            <strong>Boiling systems</strong> are the first target domain for hidden-state inference in multiphase transport, including ONB, bubble growth, instability, and pre-CHF dynamics.
             <br><br>
-            <span class="cm">// training objective</span>
-            ℒ = ℒ<sub>data</sub> + λ·<span class="hl">ℒ<sub>pde</sub></span> + μ·<span class="hl2">ℒ<sub>bc</sub></span>
+            <strong>High-power laser systems</strong> are the second target domain, where internal thermo-optical states govern beam quality, output limits, and fracture risk.
             <br><br>
-            <span class="cm">// operator (in development)</span>
-            <span class="hl3">𝒢<sub>θ</sub></span>(BCs, Q̇) → T(x, t)
+            The long-term direction is broader: AI that can understand and predict hidden states across complex physical systems.
           </div>
-          <div class="tm-eq-note">
-            Validated domains: subcooled flow boiling · laser crystal cooling<br>
-            Status: active development · preprint in preparation
+          <div class="hf-panel-note">
+            Status: active development · preprints in preparation<br>
+            Focus: hidden-state inference · performance prediction · failure-aware AI
           </div>
         </div>
-        <div class="tm-stat">
-          <div class="tm-stat-box">
-            <div class="tm-stat-val">10³×</div>
-            <div class="tm-stat-label">speed target<br>vs CFD</div>
-            <div class="tm-stat-note">research objective</div>
+
+        <div class="hf-stat">
+          <div class="hf-stat-box">
+            <div class="hf-stat-val">2</div>
+            <div class="hf-stat-label">initial use cases<br>boiling · laser</div>
+            <div class="hf-stat-note">active development</div>
           </div>
-          <div class="tm-stat-box">
-            <div class="tm-stat-val">&lt;5%</div>
-            <div class="tm-stat-label">error target<br>vs ground truth</div>
-            <div class="tm-stat-note">research objective</div>
+          <div class="hf-stat-box">
+            <div class="hf-stat-val">7</div>
+            <div class="hf-stat-label">SCIE papers<br>validation base</div>
+            <div class="hf-stat-note">5 first-author</div>
           </div>
-          <div class="tm-stat-box">
-            <div class="tm-stat-val">7</div>
-            <div class="tm-stat-label">SCIE papers<br>as validation base</div>
-            <div class="tm-stat-note">5 first-author</div>
+          <div class="hf-stat-box">
+            <div class="hf-stat-val">∞</div>
+            <div class="hf-stat-label">future domains<br>physical systems</div>
+            <div class="hf-stat-note">long-term direction</div>
           </div>
         </div>
       </div>
@@ -552,7 +595,6 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   </div>
 </section>
 
-<!-- CV -->
 <section id="cv-section">
   <div class="sec-inner">
     <div class="sec-header reveal">
@@ -565,50 +607,56 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
     <div class="cv-grid reveal">
       <div class="cv-col">
         <div class="cv-col-title">education &amp; positions</div>
+
         <div class="cv-item">
           <div class="cv-year">2025–<br>present</div>
-          <div class="cv-content">
+          <div>
             <div class="cv-title">Postdoctoral Researcher</div>
             <div class="cv-place">Thermal-Fluid &amp; Physics-Informed AI Research<br>Republic of Korea</div>
           </div>
         </div>
+
         <div class="cv-item">
           <div class="cv-year">~2025</div>
-          <div class="cv-content">
+          <div>
             <div class="cv-title">Ph.D., Mechanical Engineering</div>
             <div class="cv-place">GIST (Gwangju Institute of Science and Technology)<br>Thermal-fluid dynamics · two-phase heat transfer</div>
           </div>
         </div>
+
         <div class="cv-item">
           <div class="cv-year">current</div>
-          <div class="cv-content">
-            <div class="cv-title">ThermalMind AI — Physics-Informed AI Systems (in development)</div>
-            <div class="cv-place">Physics-Informed AI for thermal-fluid systems<br>Pre-incorporation stage</div>
+          <div>
+            <div class="cv-title">HiddenField (in development)</div>
+            <div class="cv-place">AI for hidden-state inference in physical systems<br>Independent research direction</div>
           </div>
         </div>
       </div>
 
       <div class="cv-col">
         <div class="cv-col-title">selected experience &amp; collaboration</div>
+
         <div class="cv-item">
           <div class="cv-year">ongoing</div>
-          <div class="cv-content">
-            <div class="cv-title">Collaborative Research — GIST APRI / LIG Nex1 </div>
-            <div class="cv-place">High-power laser system thermal management<br>Defence photonics · thermal stress analysis</div>
+          <div>
+            <div class="cv-title">Collaborative Research — GIST APRI / LIG Nex1</div>
+            <div class="cv-place">High-power laser system analysis<br>Defence photonics · thermo-optical coupling</div>
           </div>
         </div>
+
         <div class="cv-item">
           <div class="cv-year">2019–<br>2025</div>
-          <div class="cv-content">
+          <div>
             <div class="cv-title">Research — Flow Boiling &amp; Heat Transfer</div>
             <div class="cv-place">Microchannels · concentric annuli · EV charging</div>
           </div>
         </div>
+
         <div class="cv-item">
           <div class="cv-year">current</div>
-          <div class="cv-content">
-            <div class="cv-title">Research Direction — Physics-Informed Operator Learning</div>
-            <div class="cv-place">Scientific machine learning · operator learning · thermal applications</div>
+          <div>
+            <div class="cv-title">Research Direction — Scientific Machine Learning</div>
+            <div class="cv-place">Inverse problems · operator learning · physical hidden-state inference</div>
           </div>
         </div>
       </div>
@@ -616,13 +664,14 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="sec-inner">
     <div class="contact-inner reveal">
       <div>
         <div class="contact-heading">Get in<br><em>touch</em></div>
-        <p class="contact-body">I welcome enquiries regarding research collaboration, thermal engineering consultation, or ThermalMind AI pilot partnerships. Feel free to reach out.</p>
+        <p class="contact-body">
+          I welcome enquiries regarding research collaboration, scientific machine learning for physical systems, or HiddenField pilot partnerships.
+        </p>
         <div class="contact-rows">
           <div class="c-row">
             <span class="c-key">email</span>
@@ -637,8 +686,8 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
             <span class="c-val">Preprints available on request</span>
           </div>
           <div class="c-row">
-            <span class="c-key">thermalmind</span>
-            <span class="c-val">Pilot PoC expressions of interest welcome</span>
+            <span class="c-key">hiddenfield</span>
+            <span class="c-val">Pilot discussions and collaboration welcome</span>
           </div>
         </div>
       </div>
@@ -658,8 +707,8 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
           <select class="field-select">
             <option value="" disabled selected>Select topic</option>
             <option>Research collaboration</option>
-            <option>ThermalMind AI pilot</option>
-            <option>Thermal engineering consultation</option>
+            <option>HiddenField pilot</option>
+            <option>Scientific ML discussion</option>
             <option>General enquiry</option>
           </select>
         </div>
@@ -673,41 +722,61 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-name">Haein Jung · 정해인</div>
   <div class="foot-copy">© 2026 · haeinj.github.io/thermal-lab</div>
   <div class="foot-links">
     <a href="#research">research</a>
     <a href="#publications">publications</a>
-    <a href="#thermalmind">thermalmind ai</a>
+    <a href="#hiddenfield">hiddenfield</a>
     <a href="#contact">contact</a>
   </div>
 </footer>
 
 <script>
-// subtle bg
 const cv=document.getElementById('bg'),ctx=cv.getContext('2d');
 let W,H;
 function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
 rsz();window.addEventListener('resize',rsz);
-const pts=Array.from({length:40},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.1,vy:(Math.random()-.5)*.1,r:Math.random()*.9+.2}));
+const pts=Array.from({length:40},()=>({
+  x:Math.random()*W,
+  y:Math.random()*H,
+  vx:(Math.random()-.5)*.1,
+  vy:(Math.random()-.5)*.1,
+  r:Math.random()*.9+.2
+}));
 function draw(){
   ctx.clearRect(0,0,W,H);
-  pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(36,88,160,0.3)';ctx.fill();});
+  pts.forEach(p=>{
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<0)p.x=W;if(p.x>W)p.x=0;
+    if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(36,88,160,0.3)';
+    ctx.fill();
+  });
   requestAnimationFrame(draw);
 }
 draw();
-// reveal
-const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');});},{threshold:0.07});
+
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('v');
+  });
+},{threshold:0.07});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-// nav active
+
 const nls=document.querySelectorAll('.nav-link');
 const scs=document.querySelectorAll('section[id]');
 window.addEventListener('scroll',()=>{
   let cur='';
-  scs.forEach(s=>{if(scrollY>=s.offsetTop-80)cur=s.id;});
-  nls.forEach(a=>{const on=a.getAttribute('href')===`#${cur}`;a.style.color=on?'var(--ink)':'';a.style.background=on?'var(--paper3)':'';});
+  scs.forEach(s=>{ if(scrollY>=s.offsetTop-80) cur=s.id; });
+  nls.forEach(a=>{
+    const on=a.getAttribute('href')===`#${cur}`;
+    a.style.color=on?'var(--ink)':'';
+    a.style.background=on?'var(--paper3)':'';
+  });
 });
 </script>
 </body>
