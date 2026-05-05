@@ -318,7 +318,6 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       <div class="about-links">
         <a href="#research" class="btn-solid">Research</a>
         <a href="#publications" class="btn-ghost">Publications →</a>
-        <a href="#hiddenfield" class="btn-ghost">HiddenField →</a>
       </div>
     </div>
 
@@ -342,7 +341,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       </div>
       <div class="info-row">
         <span class="info-key">focus</span>
-        <span class="info-val">Boiling · Laser · Failure Prediction</span>
+        <span class="info-val">Boiling · Laser</span>
       </div>
       <div class="info-row">
         <span class="info-key">email</span>
@@ -361,7 +360,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         <p class="sec-sub">
           This research program is organized around one question:
           how can hidden physical states be inferred from partial observations,
-          and used to predict performance, failure, and safe operating limits in complex systems?
+          and used to predict performance, failure, and safe operating limits in thermo-fluid systems?
         </p>
       </div>
     </div>
@@ -371,7 +370,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         <div class="rc-num">00 <span class="rc-badge active">core problem</span></div>
         <div class="rc-title">Hidden-State Inference in Physical Systems</div>
         <p class="rc-body">
-          Most engineering systems are only partially observable. However, critical outcomes—performance degradation, instability onset, and failure—are governed by internal states that cannot be directly measured. My work aims to infer these hidden states using physics-informed learning, inverse modeling, and operator-based methods.
+          Most engineering systems are only partially observable. However, critical outcomes—performance degradation, fracture, and burnout—are governed by internal states that cannot be directly measured. My work aims to infer these hidden states using physics-informed learning, inverse modeling, and operator-based methods.
         </p>
         <div class="rc-tags">
           <span class="rc-tag">inverse problem</span>
@@ -385,11 +384,10 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         <div class="rc-num">01 <span class="rc-badge active">active</span></div>
         <div class="rc-title">Use Case I — Boiling and Two-Phase Systems</div>
         <p class="rc-body">
-          Experimental and numerical investigation of subcooled and saturated flow boiling in microchannels, concentric annuli, and finned geometries. Current focus includes onset of nucleate boiling, bubble dynamics, flow instability, and mechanistic interpretation of failure precursors in phase-change systems.
+          Experimental and numerical investigation of subcooled and saturated flow boiling in microchannels, concentric annuli, and finned geometries. Current focus includes onset of nucleate boiling, bubble dynamics, and critical heat flux in phase-change systems.
         </p>
         <div class="rc-tags">
           <span class="rc-tag">boiling</span>
-          <span class="rc-tag">two-phase</span>
           <span class="rc-tag">ONB</span>
           <span class="rc-tag">instability</span>
         </div>
@@ -402,7 +400,7 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
           Thermo-optical analysis of liquid-immersion-cooled solid-state laser systems under high heat flux. Focus on hidden states such as internal temperature fields, thermal stress, refractive index variation, and their effects on beam quality degradation, safe operating limits, and fracture risk.
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">laser</span>
+          <span class="rc-tag">laser power</span>
           <span class="rc-tag">thermo-optics</span>
           <span class="rc-tag">beam quality</span>
           <span class="rc-tag">failure</span>
@@ -561,11 +559,11 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         <div class="hf-panel">
           <div class="hf-panel-label">current use cases</div>
           <div class="hf-panel-body">
-            <strong>Boiling systems</strong> are the first target domain for hidden-state inference in multiphase transport, including ONB, bubble growth, instability, and pre-CHF dynamics.
+            <strong>Boiling systems</strong> are the first target domain for hidden-state inference in multiphase transport, including ONB, bubble growth, instability, and CHF dynamics.
             <br><br>
             <strong>High-power laser systems</strong> are the second target domain, where internal thermo-optical states govern beam quality, output limits, and fracture risk.
             <br><br>
-            The long-term direction is broader: AI that can understand and predict hidden states across complex physical systems.
+            The long-term direction is broader: AI that can understand and predict hidden states across real world physical systems.
           </div>
           <div class="hf-panel-note">
             Status: active development · preprints in preparation<br>
@@ -681,43 +679,9 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
             <span class="c-key">location</span>
             <span class="c-val">Republic of Korea</span>
           </div>
-          <div class="c-row">
-            <span class="c-key">research</span>
-            <span class="c-val">Preprints available on request</span>
-          </div>
-          <div class="c-row">
-            <span class="c-key">hiddenfield</span>
-            <span class="c-val">Pilot discussions and collaboration welcome</span>
-          </div>
         </div>
       </div>
 
-      <div class="contact-form">
-        <div class="form-title">Send a message</div>
-        <div class="field">
-          <label class="field-label">name / organisation</label>
-          <input type="text" class="field-input" placeholder="Your name or institution">
-        </div>
-        <div class="field">
-          <label class="field-label">email</label>
-          <input type="email" class="field-input" placeholder="your@email.com">
-        </div>
-        <div class="field">
-          <label class="field-label">topic</label>
-          <select class="field-select">
-            <option value="" disabled selected>Select topic</option>
-            <option>Research collaboration</option>
-            <option>HiddenField pilot</option>
-            <option>Scientific ML discussion</option>
-            <option>General enquiry</option>
-          </select>
-        </div>
-        <div class="field">
-          <label class="field-label">message</label>
-          <textarea class="field-textarea" placeholder="Your message..."></textarea>
-        </div>
-        <button class="form-submit">Send →</button>
-      </div>
     </div>
   </div>
 </section>
