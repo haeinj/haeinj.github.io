@@ -3,288 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haein Jung — AI for Hidden Physical Systems</title>
+<title>Haein Jung — Postdoctoral Researcher</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<style>
-:root {
-  --ink:#0E0F11; --ink2:#2A2D33; --ink3:#6B7080; --ink4:#A0A6B5;
-  --paper:#F5F4F0; --paper2:#EDECE7; --paper3:#E3E1D8; --rule:#D4D1C6;
-  --blue:#1A3F6F; --blue2:#2458A0; --blue-light:#E8EEF8;
-  --red:#B83232; --green:#2A6B3F;
-  --mono:'IBM Plex Mono',monospace;
-  --serif:'EB Garamond',Georgia,serif;
-  --sans:'IBM Plex Sans',system-ui,sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:var(--sans);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-::selection{background:var(--blue);color:white;}
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-track{background:var(--paper2);}
-::-webkit-scrollbar-thumb{background:var(--rule);}
 
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(245,244,240,0.94);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--rule);
-  padding:0 56px;height:52px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.nav-name{
-  font-family:var(--serif);font-size:16px;font-weight:500;
-  font-style:italic;color:var(--ink);text-decoration:none;
-  letter-spacing:-0.01em;
-}
-.nav-links{display:flex;}
-.nav-link{
-  font-family:var(--mono);font-size:10px;letter-spacing:0.06em;
-  color:var(--ink3);text-decoration:none;padding:0 16px;
-  height:52px;display:flex;align-items:center;
-  border-right:1px solid var(--rule);transition:color .15s,background .15s;
-}
-.nav-link:first-child{border-left:1px solid var(--rule);}
-.nav-link:hover{color:var(--ink);background:var(--paper2);}
-.nav-contact{
-  font-family:var(--mono);font-size:10px;letter-spacing:0.06em;
-  padding:6px 16px;border:1px solid var(--ink3);color:var(--ink3);
-  text-decoration:none;transition:border-color .15s,color .15s;
-}
-.nav-contact:hover{border-color:var(--blue);color:var(--blue);}
-
-/* ── HERO / ABOUT ── */
-#about{
-  padding:130px 56px 96px;
-  border-bottom:1px solid var(--rule);
-  min-height:100vh;display:flex;align-items:center;
-}
-.about-inner{
-  max-width:1100px;width:100%;
-  display:grid;grid-template-columns:1fr 380px;
-  gap:80px;align-items:start;
-}
-.about-tag{
-  font-family:var(--mono);font-size:9.5px;letter-spacing:0.14em;
-  color:var(--blue2);margin-bottom:20px;
-  display:flex;align-items:center;gap:10px;
-}
-.about-tag::before{content:'';width:22px;height:1px;background:var(--blue2);}
-.about-name{
-  font-family:var(--serif);
-  font-size:clamp(44px,5vw,72px);
-  font-weight:400;line-height:0.96;letter-spacing:-0.025em;
-  margin-bottom:6px;
-}
-.about-name-kr{
-  font-family:var(--serif);font-size:clamp(18px,2vw,26px);
-  font-weight:400;color:var(--ink3);letter-spacing:0.02em;
-  margin-bottom:32px;display:block;
-}
-.about-desc{
-  font-size:15px;font-weight:300;line-height:1.82;color:var(--ink2);
-  max-width:570px;margin-bottom:36px;
-  border-left:2px solid var(--rule);padding-left:20px;
-}
-.about-desc em{font-style:italic;color:var(--ink3);}
-.about-desc strong{font-weight:500;color:var(--ink);}
-.about-links{display:flex;gap:10px;flex-wrap:wrap;}
-.btn-solid{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;
-  padding:10px 24px;background:var(--ink);color:var(--paper);
-  text-decoration:none;transition:background .18s;
-}
-.btn-solid:hover{background:var(--blue);}
-.btn-ghost{
-  font-family:var(--mono);font-size:10.5px;letter-spacing:0.06em;
-  padding:10px 24px;border:1px solid var(--rule);color:var(--ink3);
-  text-decoration:none;transition:border-color .18s,color .18s;
-}
-.btn-ghost:hover{border-color:var(--ink);color:var(--ink);}
-
-/* About right — info card */
-.info-card{
-  background:var(--paper2);border:1px solid var(--rule);
-  padding:36px 32px;
-}
-.info-label{
-  font-family:var(--mono);font-size:8.5px;letter-spacing:0.14em;
-  color:var(--ink4);text-transform:lowercase;
-  border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:20px;
-}
-.info-row{
-  display:flex;gap:14px;padding:12px 0;
-  border-bottom:1px solid rgba(212,209,198,0.5);
-  align-items:flex-start;
-}
-.info-row:last-child{border-bottom:none;}
-.info-key{
-  font-family:var(--mono);font-size:8.5px;letter-spacing:0.1em;
-  color:var(--ink4);min-width:72px;padding-top:2px;flex-shrink:0;
-}
-.info-val{
-  font-size:12.5px;font-weight:300;color:var(--ink2);line-height:1.55;
-}
-.info-val a{color:var(--blue2);text-decoration:none;}
-.info-val a:hover{text-decoration:underline;}
-
-/* ── SECTIONS ── */
-section{border-bottom:1px solid var(--rule);padding:88px 56px;}
-.sec-inner{max-width:1100px;margin:0 auto;}
-.sec-header{display:grid;grid-template-columns:160px 1fr;gap:40px;margin-bottom:64px;}
-.sec-num{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:var(--ink4);padding-top:5px;}
-.sec-title{font-family:var(--serif);font-size:clamp(26px,2.8vw,38px);font-weight:500;line-height:1.1;letter-spacing:-0.01em;}
-.sec-title em{font-style:italic;color:var(--blue2);}
-.sec-sub{font-size:13.5px;font-weight:300;color:var(--ink3);line-height:1.72;margin-top:10px;max-width:620px;}
-
-/* ── RESEARCH ── */
-#research{background:var(--paper);}
-.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);}
-.res-card{background:var(--paper);padding:40px 36px;transition:background .2s;}
-.res-card:hover{background:var(--paper2);}
-.res-card.full{grid-column:1/-1;background:var(--paper2);}
-.res-card.full:hover{background:var(--paper3);}
-.rc-num{font-family:var(--mono);font-size:8.5px;letter-spacing:0.12em;color:var(--ink4);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
-.rc-badge{font-family:var(--mono);font-size:8px;letter-spacing:0.08em;padding:3px 9px;border:1px solid;display:inline-block;}
-.rc-badge.active{border-color:var(--green);color:var(--green);}
-.rc-badge.dev{border-color:var(--blue2);color:var(--blue2);}
-.rc-title{font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.22;margin-bottom:12px;letter-spacing:-0.01em;}
-.rc-body{font-size:12.5px;font-weight:300;line-height:1.78;color:var(--ink3);}
-.rc-tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px;}
-.rc-tag{font-family:var(--mono);font-size:8px;letter-spacing:0.08em;padding:3px 9px;border:1px solid var(--rule);color:var(--ink4);}
-
-/* ── PUBLICATIONS ── */
-#publications{background:var(--paper2);}
-.pub-list{border:1px solid var(--rule);}
-.pub-item{
-  display:grid;grid-template-columns:52px 1fr 90px;
-  gap:24px;padding:24px 32px;
-  border-bottom:1px solid var(--rule);
-  transition:background .15s;align-items:start;
-}
-.pub-item:last-child{border-bottom:none;}
-.pub-item:hover{background:var(--paper);}
-.pub-year{font-family:var(--mono);font-size:9.5px;color:var(--ink4);letter-spacing:0.04em;padding-top:2px;}
-.pub-title{font-family:var(--serif);font-size:15.5px;font-weight:400;line-height:1.38;margin-bottom:4px;color:var(--ink);}
-.pub-journal-name{font-family:var(--mono);font-size:8.5px;color:var(--ink4);letter-spacing:0.04em;line-height:1.5;}
-.pub-journal-name em{font-style:normal;color:var(--blue2);}
-.pub-badge{font-family:var(--mono);font-size:8px;letter-spacing:0.06em;padding:3px 8px;border:1px solid;text-align:center;line-height:1.6;align-self:start;}
-.pub-badge.scie{border-color:var(--blue);color:var(--blue);background:var(--blue-light);}
-.pub-badge.prep{border-color:var(--green);color:var(--green);background:rgba(42,107,63,0.04);}
-
-/* ── HIDDENFIELD ── */
-#hiddenfield{background:var(--paper);}
-.hf-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.hf-desc{font-size:14px;font-weight:300;line-height:1.8;color:var(--ink3);margin-bottom:32px;max-width:500px;}
-.hf-products{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);}
-.hf-product{background:var(--paper);padding:20px 24px;display:flex;gap:16px;align-items:flex-start;transition:background .15s;}
-.hf-product:hover{background:var(--paper2);}
-.hf-prod-tag{font-family:var(--mono);font-size:8px;letter-spacing:0.08em;padding:3px 9px;border:1px solid var(--rule);color:var(--ink4);flex-shrink:0;margin-top:2px;}
-.hf-prod-tag.dev{border-color:var(--blue2);color:var(--blue2);background:var(--blue-light);}
-.hf-prod-name{font-family:var(--serif);font-size:15px;font-weight:500;margin-bottom:3px;letter-spacing:-0.01em;}
-.hf-prod-desc{font-size:12px;font-weight:300;color:var(--ink3);line-height:1.6;}
-
-.hf-panel{background:var(--paper2);border:1px solid var(--rule);padding:32px;}
-.hf-panel-label{
-  font-family:var(--mono);font-size:8.5px;letter-spacing:0.12em;color:var(--ink4);
-  border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:20px;
-}
-.hf-panel-body{font-size:13px;font-weight:300;line-height:1.85;color:var(--ink2);}
-.hf-panel-body strong{font-weight:500;color:var(--ink);}
-.hf-panel-note{
-  border-top:1px solid var(--rule);padding-top:12px;margin-top:16px;
-  font-family:var(--mono);font-size:8.5px;color:var(--ink4);line-height:1.7;
-}
-.hf-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1px;}
-.hf-stat-box{background:var(--paper2);padding:22px 20px;}
-.hf-stat-val{
-  font-family:var(--serif);font-size:34px;font-weight:400;font-style:italic;
-  color:var(--blue);line-height:1;margin-bottom:4px;
-}
-.hf-stat-label{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;color:var(--ink4);line-height:1.5;}
-.hf-stat-note{font-family:var(--mono);font-size:8.5px;color:var(--ink4);margin-top:2px;font-style:italic;}
-
-/* ── CV ── */
-#cv-section{background:var(--paper2);}
-.cv-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
-.cv-col-title{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;color:var(--ink4);border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:0;}
-.cv-item{padding:18px 0;border-bottom:1px solid rgba(212,209,198,0.5);display:grid;grid-template-columns:80px 1fr;gap:16px;}
-.cv-item:last-child{border-bottom:none;}
-.cv-year{font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:0.04em;padding-top:2px;}
-.cv-title{font-size:13px;font-weight:500;line-height:1.3;margin-bottom:2px;}
-.cv-place{font-family:var(--mono);font-size:10px;color:var(--ink4);letter-spacing:0.04em;line-height:1.5;}
-
-/* ── CONTACT ── */
-#contact{background:var(--paper);}
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
-.contact-heading{font-family:var(--serif);font-size:clamp(24px,2.5vw,36px);font-weight:400;line-height:1.2;letter-spacing:-0.01em;margin-bottom:16px;}
-.contact-heading em{font-style:italic;color:var(--blue2);}
-.contact-body{font-size:13.5px;font-weight:300;line-height:1.75;color:var(--ink3);margin-bottom:28px;}
-.contact-rows{display:flex;flex-direction:column;gap:14px;}
-.c-row{display:flex;gap:14px;}
-.c-key{font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;color:var(--ink4);min-width:72px;padding-top:2px;}
-.c-val{font-size:13px;color:var(--ink2);line-height:1.55;}
-.contact-form{background:var(--paper2);border:1px solid var(--rule);padding:36px;}
-.form-title{font-family:var(--serif);font-size:17px;font-weight:500;margin-bottom:24px;letter-spacing:-0.01em;}
-.field{margin-bottom:16px;}
-.field-label{font-family:var(--mono);font-size:9.5px;letter-spacing:0.1em;color:var(--ink4);display:block;margin-bottom:6px;}
-.field-input,.field-select,.field-textarea{
-  width:100%;background:var(--paper);border:1px solid var(--rule);color:var(--ink);
-  padding:10px 13px;font-family:var(--sans);font-size:13px;font-weight:300;outline:none;
-  transition:border-color .15s;appearance:none;
-}
-.field-input:focus,.field-select:focus,.field-textarea:focus{border-color:var(--blue);}
-.field-input::placeholder,.field-textarea::placeholder{color:var(--ink4);}
-.field-textarea{resize:vertical;min-height:80px;}
-.field-select{cursor:pointer;}
-.field-select option{background:var(--paper);color:var(--ink);}
-.form-submit{
-  font-family:var(--mono);font-size:10px;letter-spacing:0.08em;padding:11px 26px;
-  background:var(--ink);color:var(--paper);border:none;cursor:pointer;transition:background .15s;
-}
-.form-submit:hover{background:var(--blue);}
-
-/* ── FOOTER ── */
-footer{
-  border-top:1px solid var(--rule);padding:24px 56px;
-  display:flex;align-items:center;justify-content:space-between;background:var(--paper);
-}
-.foot-name{font-family:var(--serif);font-size:13px;font-style:italic;color:var(--ink3);}
-.foot-copy{font-family:var(--mono);font-size:9.5px;color:var(--ink4);letter-spacing:0.06em;}
-.foot-links{display:flex;gap:18px;}
-.foot-links a{
-  font-family:var(--mono);font-size:9.5px;color:var(--ink4);text-decoration:none;
-  letter-spacing:0.06em;transition:color .12s;
-}
-.foot-links a:hover{color:var(--ink);}
-
-/* ── REVEAL ── */
-.reveal{
-  opacity:0;transform:translateY(14px);
-  transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1);
-}
-.reveal.v{opacity:1;transform:none;}
-canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
-
-@media(max-width:860px){
-  nav{padding:0 20px;}
-  .nav-links{display:none;}
-  section,#about{padding:72px 20px;}
-  .about-inner,.hf-inner,.contact-inner,.cv-grid{grid-template-columns:1fr;}
-  .info-card{display:none;}
-  .sec-header{grid-template-columns:1fr;gap:8px;}
-  .res-grid{grid-template-columns:1fr;}
-  .res-card.full{grid-column:auto;}
-  .pub-item{grid-template-columns:1fr;}
-  footer{flex-direction:column;gap:10px;text-align:center;}
-}
-</style>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/nav.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
 
@@ -295,29 +23,32 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   <div class="nav-links">
     <a href="#research" class="nav-link">research</a>
     <a href="#publications" class="nav-link">publications</a>
-    <a href="#hiddenfield" class="nav-link">hiddenfield</a>
     <a href="#cv-section" class="nav-link">cv</a>
   </div>
   <a href="#contact" class="nav-contact">contact</a>
 </nav>
 
+<!-- ══════════════════════════ ABOUT ══════════════════════════ -->
 <section id="about">
   <div class="about-inner">
     <div>
-      <div class="about-tag">AI for hidden physical systems</div>
+      <div class="about-tag">Physics-informed learning · two-phase heat transfer</div>
       <div class="about-name">Haein Jung</div>
       <span class="about-name-kr">정 해 인</span>
       <p class="about-desc">
-        Most physical systems cannot be fully observed. Their performance and failure are governed by
-        <strong>hidden physical states</strong> such as temperature fields, stress distributions, and interfacial dynamics.
+        Postdoctoral researcher at GIST.
         <br><br>
-        My work develops AI models that <strong>infer these hidden states</strong> from limited observations, enabling real-time prediction of performance, failure risk, and safe operating limits.
+        Current work focuses on physics-informed neural networks (PINNs) for inverse
+        problems in two-phase systems — using governing equations together with sparse
+        experimental data to recover unobservable fields such as local superheat from
+        bubble-growth dynamics.
         <br><br>
-        The goal is to make complex physical systems <em>understandable, predictable, and controllable</em> in real time.
+        This direction builds on prior experimental and modeling work in subcooled flow
+        boiling, density-wave instability, and high-power laser thermal management.
       </p>
       <div class="about-links">
-        <a href="#research" class="btn-solid">Research</a>
-        <a href="#publications" class="btn-ghost">Publications →</a>
+        <a href="#publications" class="btn-solid">Publications</a>
+        <a href="#research" class="btn-ghost">Research →</a>
       </div>
     </div>
 
@@ -325,23 +56,23 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
       <div class="info-label">profile</div>
       <div class="info-row">
         <span class="info-key">position</span>
-        <span class="info-val">Postdoctoral Researcher</span>
+        <span class="info-val">Postdoctoral Researcher<br>School of Mechanical Engineering, GIST</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">advisor</span>
+        <span class="info-val">Prof. Seunghyun Lee</span>
       </div>
       <div class="info-row">
         <span class="info-key">education</span>
-        <span class="info-val">Ph.D., Mechanical Engineering<br>GIST (Gwangju Institute of Science and Technology)</span>
+        <span class="info-val">Ph.D., Mechanical Engineering, GIST<br>M.S., Mechanical Engineering, Korea Aerospace University</span>
       </div>
       <div class="info-row">
-        <span class="info-key">field</span>
-        <span class="info-val">Thermal Management<br>Scientific Machine Learning<br>Physical Hidden-State Inference</span>
+        <span class="info-key">interests</span>
+        <span class="info-val">Physics-informed neural networks<br>Inverse problems in multiphase systems<br>Flow boiling &amp; two-phase heat transfer</span>
       </div>
       <div class="info-row">
         <span class="info-key">papers</span>
-        <span class="info-val">7 SCIE papers<br>5 first-author</span>
-      </div>
-      <div class="info-row">
-        <span class="info-key">focus</span>
-        <span class="info-val">Boiling</span>
+        <span class="info-val">8 SCIE publications · 6 first-author</span>
       </div>
       <div class="info-row">
         <span class="info-key">email</span>
@@ -351,91 +82,125 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
   </div>
 </section>
 
+<!-- ══════════════════════════ RESEARCH ══════════════════════════ -->
 <section id="research">
   <div class="sec-inner">
     <div class="sec-header reveal">
       <div class="sec-num">§ 01</div>
       <div>
-        <h2 class="sec-title">Research<br><em>Program</em></h2>
+        <h2 class="sec-title">Research<br><em>Interests</em></h2>
         <p class="sec-sub">
-          This research program is organized around one question:
-          how can hidden physical states be inferred from partial observations,
-          and used to predict performance, failure, and safe operating limits in thermo-fluid systems?
+          Current work centers on physics-informed learning for inverse problems in
+          two-phase systems, building on a background in experimental and computational
+          two-phase heat transfer.
         </p>
       </div>
     </div>
 
     <div class="res-grid reveal">
+
       <div class="res-card full">
-        <div class="rc-num">00 <span class="rc-badge active">core problem</span></div>
-        <div class="rc-title">Hidden-State Inference in Physical Systems</div>
+        <div class="rc-num">01 — current focus</div>
+        <div class="rc-title">Physics-informed learning for inverse problems in multiphase systems</div>
         <p class="rc-body">
-          Most engineering systems are only partially observable. However, critical outcomes—performance degradation, fracture, and burnout—are governed by internal states that cannot be directly measured. My work aims to infer these hidden states using physics-informed learning, inverse modeling, and operator-based methods.
+          Ongoing research applying physics-informed neural networks (PINNs) to inverse
+          inference of unobservable physical fields in two-phase systems. The first
+          benchmark recovers local wall superheat from observed bubble-growth dynamics,
+          using the Plesset–Zwick analytical solution and prior experimental data with
+          HFE-7100 as the validation base. The longer-term direction is operator-based
+          inference for parametric multiphase problems where direct measurement is
+          impractical or impossible.
+          <br><br>
+          Implementation: DeepXDE / PyTorch. Manuscripts in preparation.
         </p>
         <div class="rc-tags">
+          <span class="rc-tag">PINN</span>
           <span class="rc-tag">inverse problem</span>
-          <span class="rc-tag">latent state inference</span>
-          <span class="rc-tag">physics-informed learning</span>
+          <span class="rc-tag">DeepXDE</span>
+          <span class="rc-tag">bubble dynamics</span>
           <span class="rc-tag">operator learning</span>
         </div>
       </div>
 
       <div class="res-card">
-        <div class="rc-num">01 <span class="rc-badge active">active</span></div>
-        <div class="rc-title">Use Case I — Boiling and Two-Phase Systems</div>
+        <div class="rc-num">02 — foundation</div>
+        <div class="rc-title">Subcooled flow boiling &amp; density-wave instability</div>
         <p class="rc-body">
-          Experimental and numerical investigation of subcooled and saturated flow boiling in microchannels, concentric annuli, and finned geometries. Current focus includes onset of nucleate boiling, bubble dynamics, and critical heat flux in phase-change systems.
+          Experimental investigation of subcooled flow boiling in horizontal concentric
+          annular geometries. Focus on heat transfer characteristics, bubble behavior,
+          and density-wave oscillations near the onset of nucleate boiling — providing
+          the experimental ground truth that informs the current PINN work.
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">boiling</span>
+          <span class="rc-tag">subcooled boiling</span>
           <span class="rc-tag">ONB</span>
-          <span class="rc-tag">instability</span>
+          <span class="rc-tag">density-wave instability</span>
         </div>
       </div>
 
       <div class="res-card">
-        <div class="rc-num">02 <span class="rc-badge active">active</span></div>
-        <div class="rc-title">Use Case II — High-Power Laser Systems</div>
+        <div class="rc-num">03 — foundation</div>
+        <div class="rc-title">Mechanistic modeling of flow boiling instabilities</div>
         <p class="rc-body">
-          Thermo-optical analysis of liquid-immersion-cooled solid-state laser systems under high heat flux. Focus on hidden states such as internal temperature fields, thermal stress, refractive index variation, and their effects on beam quality degradation, safe operating limits, and fracture risk.
+          Mechanistic modeling of oscillatory flow boiling in large length-to-diameter
+          ratio micro-channel heat sinks, including an analytical model predicting
+          oscillation frequency under different operating conditions
+          (IJHMT, 2023).
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">laser power</span>
-          <span class="rc-tag">thermo-optics</span>
-          <span class="rc-tag">beam quality</span>
-          <span class="rc-tag">failure</span>
+          <span class="rc-tag">micro-channel</span>
+          <span class="rc-tag">two-phase flow</span>
+          <span class="rc-tag">mechanistic modeling</span>
         </div>
       </div>
 
       <div class="res-card full">
-        <div class="rc-num">03 <span class="rc-badge dev">in development</span></div>
-        <div class="rc-title">Physics-Informed AI for Real-Time Physical Decision Making</div>
+        <div class="rc-num">04 — prior</div>
+        <div class="rc-title">Earlier work</div>
         <p class="rc-body">
-          Ongoing work develops physics-informed neural operators and inverse learning frameworks to predict hidden states, performance, and failure conditions from sparse observations. The long-term goal is real-time physical decision making for design, operation, and control.
+          Prior projects included liquid-immersion thermal management of multi-slab
+          Nd:YLF laser systems (with GIST APRI), thermal-fluid design for ultra-fast
+          EV charging cable cooling, and computational rheology of mixing flows during
+          the M.S. period at SNU. These provide a broad multiphysics foundation
+          relevant to the current PINN-based research direction.
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">PINN</span>
-          <span class="rc-tag">DeepONet</span>
-          <span class="rc-tag">neural operator</span>
-          <span class="rc-tag">surrogate modeling</span>
-          <span class="rc-tag">real-time inference</span>
+          <span class="rc-tag">solid-state laser</span>
+          <span class="rc-tag">CFD</span>
+          <span class="rc-tag">thermo-optics</span>
+          <span class="rc-tag">computational rheology</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- ══════════════════════════ PUBLICATIONS ══════════════════════════ -->
 <section id="publications">
   <div class="sec-inner">
     <div class="sec-header reveal">
       <div class="sec-num">§ 02</div>
       <div>
-        <h2 class="sec-title">Selected<br><em>Work</em></h2>
-        <p class="sec-sub">Selected publications in thermal-fluid dynamics and physical systems modeling. Physics-informed AI work is currently in preparation.</p>
+        <h2 class="sec-title"><em>Publications</em></h2>
+        <p class="sec-sub">
+          Peer-reviewed publications in thermal-fluid engineering and multiphase transport.
+          PINN-based work currently in preparation.
+        </p>
       </div>
     </div>
 
     <div class="pub-list reveal">
+
+      <div class="pub-item">
+        <div class="pub-year">2026</div>
+        <div>
+          <div class="pub-title">Experimental investigation of subcooled density-wave oscillations in concentric annulus</div>
+          <div class="pub-journal-name"><em>International Journal of Heat and Mass Transfer</em> · H. Jung, S. Lee</div>
+        </div>
+        <div class="pub-badge accepted">accepted</div>
+      </div>
+
       <div class="pub-item">
         <div class="pub-year">2025</div>
         <div>
@@ -499,176 +264,91 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
         <div class="pub-badge scie">SCIE</div>
       </div>
 
-      <div class="pub-item">
-        <div class="pub-year">in prep.</div>
-        <div>
-          <div class="pub-title">Experimental investigation of subcooled density-wave oscillations in concentric annulus</div>
-          <div class="pub-journal-name"><em>International Journal of Heat and Mass Transfer</em> · H. Jung, S. Lee</div>
-        </div>
-        <div class="pub-badge prep">in prep.</div>
-      </div>
     </div>
   </div>
 </section>
 
-<section id="hiddenfield">
-  <div class="sec-inner">
-    <div class="sec-header reveal">
-      <div class="sec-num">§ 03</div>
-      <div>
-        <h2 class="sec-title">HiddenField</h2>
-        <p class="sec-sub">AI for revealing hidden physical states and predicting performance and failure in real-world systems.</p>
-      </div>
-    </div>
-
-    <div class="hf-inner reveal">
-      <div>
-        <p class="hf-desc">
-          HiddenField explores AI models that infer unobservable internal states in physical systems from sparse observations.
-          Instead of replacing physics, the goal is to combine data, governing equations, and physical constraints to make real-time prediction, diagnosis, and decision making possible.
-        </p>
-
-        <div class="hf-products">
-          <div class="hf-product">
-            <span class="hf-prod-tag dev">input</span>
-            <div>
-              <div class="hf-prod-name">System Conditions</div>
-              <div class="hf-prod-desc">Geometry, operating conditions, and sparse sensor or imaging data.</div>
-            </div>
-          </div>
-
-          <div class="hf-product">
-            <span class="hf-prod-tag dev">output</span>
-            <div>
-              <div class="hf-prod-name">Hidden State Inference</div>
-              <div class="hf-prod-desc">Temperature fields, stress distributions, interfacial dynamics, and other latent physical variables.</div>
-            </div>
-          </div>
-
-          <div class="hf-product">
-            <span class="hf-prod-tag dev">output</span>
-            <div>
-              <div class="hf-prod-name">Performance & Failure Prediction</div>
-              <div class="hf-prod-desc">Output limits, instability onset, fracture risk, and safe operating ranges.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="hf-panel">
-          <div class="hf-panel-label">current use cases</div>
-          <div class="hf-panel-body">
-            <strong>Boiling systems</strong> are the first target domain for hidden-state inference in multiphase transport, including ONB, bubble growth, instability, and CHF dynamics.
-            <br><br>
-            <strong>High-power laser systems</strong> are the second target domain, where internal thermo-optical states govern beam quality, output limits, and fracture risk.
-            <br><br>
-            The long-term direction is broader: AI that can understand and predict hidden states across real world physical systems.
-          </div>
-          <div class="hf-panel-note">
-            Status: active development · preprints in preparation<br>
-            Focus: hidden-state inference · performance prediction · failure-aware AI
-          </div>
-        </div>
-
-        <div class="hf-stat">
-          <div class="hf-stat-box">
-            <div class="hf-stat-val">2</div>
-            <div class="hf-stat-label">initial use cases<br>boiling · laser</div>
-            <div class="hf-stat-note">active development</div>
-          </div>
-          <div class="hf-stat-box">
-            <div class="hf-stat-val">7</div>
-            <div class="hf-stat-label">SCIE papers<br>validation base</div>
-            <div class="hf-stat-note">5 first-author</div>
-          </div>
-          <div class="hf-stat-box">
-            <div class="hf-stat-val">∞</div>
-            <div class="hf-stat-label">future domains<br>physical systems</div>
-            <div class="hf-stat-note">long-term direction</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- ══════════════════════════ CV ══════════════════════════ -->
 <section id="cv-section">
   <div class="sec-inner">
     <div class="sec-header reveal">
-      <div class="sec-num">§ 04</div>
+      <div class="sec-num">§ 03</div>
       <div>
         <h2 class="sec-title">Curriculum<br><em>Vitae</em></h2>
       </div>
     </div>
 
     <div class="cv-grid reveal">
+
       <div class="cv-col">
         <div class="cv-col-title">education &amp; positions</div>
 
         <div class="cv-item">
-          <div class="cv-year">2025–<br>present</div>
+          <div class="cv-year">2025.9–<br>present</div>
           <div>
             <div class="cv-title">Postdoctoral Researcher</div>
-            <div class="cv-place">Thermal-Fluid &amp; Physics-Informed AI Research<br>Republic of Korea</div>
+            <div class="cv-place">School of Mechanical and Robotics Engineering, GIST<br>Advisor: Prof. Seunghyun Lee</div>
           </div>
         </div>
 
         <div class="cv-item">
-          <div class="cv-year">~2025</div>
+          <div class="cv-year">~2025.8</div>
           <div>
             <div class="cv-title">Ph.D., Mechanical Engineering</div>
-            <div class="cv-place">GIST (Gwangju Institute of Science and Technology)<br>Thermal-fluid dynamics · two-phase heat transfer</div>
+            <div class="cv-place">GIST (Gwangju Institute of Science and Technology)<br>Two-phase heat transfer · flow boiling instability</div>
           </div>
         </div>
 
         <div class="cv-item">
-          <div class="cv-year">current</div>
+          <div class="cv-year">~2019.5</div>
           <div>
-            <div class="cv-title">HiddenField (in development)</div>
-            <div class="cv-place">AI for hidden-state inference in physical systems<br>Independent research direction</div>
+            <div class="cv-title">M.S., Mechanical Engineering</div>
+            <div class="cv-place">Korea Aerospace University<br>chaotic mixing</div>
           </div>
         </div>
       </div>
 
       <div class="cv-col">
-        <div class="cv-col-title">selected experience &amp; collaboration</div>
-
-        <div class="cv-item">
-          <div class="cv-year">ongoing</div>
-          <div>
-            <div class="cv-title">Collaborative Research — GIST APRI / LIG Nex1</div>
-            <div class="cv-place">High-power laser system analysis<br>Defence photonics · thermo-optical coupling</div>
-          </div>
-        </div>
-
-        <div class="cv-item">
-          <div class="cv-year">2019–<br>2025</div>
-          <div>
-            <div class="cv-title">Research — Flow Boiling &amp; Heat Transfer</div>
-            <div class="cv-place">Microchannels · concentric annuli · EV charging</div>
-          </div>
-        </div>
+        <div class="cv-col-title">research projects &amp; activities</div>
 
         <div class="cv-item">
           <div class="cv-year">current</div>
           <div>
-            <div class="cv-title">Research Direction — Scientific Machine Learning</div>
-            <div class="cv-place">Inverse problems · operator learning · physical hidden-state inference</div>
+            <div class="cv-title">Physics-informed neural networks for inverse multiphase problems</div>
+            <div class="cv-place">DeepXDE / PyTorch · bubble-dynamics inverse inference</div>
           </div>
         </div>
-      </div>
+
+        <div class="cv-item">
+          <div class="cv-year">~2026.6</div>
+          <div>
+            <div class="cv-title">Liquid-immersion laser thermal management</div>
+            <div class="cv-place">Collaboration with GIST APRI<br>Multi-slab Nd:YLF · thermo-optical coupling</div>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-year">~2024</div>
+          <div>
+            <div class="cv-title">EV fast-charging cable cooling</div>
+            <div class="cv-place">Subcooled flow boiling in concentric annuli</div>
+          </div>
+        </div>
+
+
     </div>
   </div>
 </section>
 
+<!-- ══════════════════════════ CONTACT ══════════════════════════ -->
 <section id="contact">
   <div class="sec-inner">
     <div class="contact-inner reveal">
       <div>
         <div class="contact-heading">Get in<br><em>touch</em></div>
         <p class="contact-body">
-          I welcome enquiries regarding research collaboration, scientific machine learning for physical systems, or HiddenField pilot partnerships.
+          I welcome enquiries regarding research collaboration on physics-informed
+          learning, inverse problems in multiphase systems, or two-phase heat transfer.
         </p>
         <div class="contact-rows">
           <div class="c-row">
@@ -676,72 +356,29 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.045;}
             <span class="c-val">haeinjung@gm.gist.ac.kr</span>
           </div>
           <div class="c-row">
-            <span class="c-key">location</span>
-            <span class="c-val">Republic of Korea</span>
+            <span class="c-key">office</span>
+            <span class="c-val">School of Mechanical Engineering, GIST<br>Gwangju, Republic of Korea</span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
 <footer>
   <div class="foot-name">Haein Jung · 정해인</div>
-  <div class="foot-copy">© 2026 · haeinj.github.io/thermal-lab</div>
+  <div class="foot-copy">© 2026</div>
   <div class="foot-links">
     <a href="#research">research</a>
     <a href="#publications">publications</a>
-    <a href="#hiddenfield">hiddenfield</a>
+    <a href="#cv-section">cv</a>
     <a href="#contact">contact</a>
   </div>
 </footer>
 
-<script>
-const cv=document.getElementById('bg'),ctx=cv.getContext('2d');
-let W,H;
-function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
-rsz();window.addEventListener('resize',rsz);
-const pts=Array.from({length:40},()=>({
-  x:Math.random()*W,
-  y:Math.random()*H,
-  vx:(Math.random()-.5)*.1,
-  vy:(Math.random()-.5)*.1,
-  r:Math.random()*.9+.2
-}));
-function draw(){
-  ctx.clearRect(0,0,W,H);
-  pts.forEach(p=>{
-    p.x+=p.vx;p.y+=p.vy;
-    if(p.x<0)p.x=W;if(p.x>W)p.x=0;
-    if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle='rgba(36,88,160,0.3)';
-    ctx.fill();
-  });
-  requestAnimationFrame(draw);
-}
-draw();
+<script src="assets/js/canvas-bg.js" defer></script>
+<script src="assets/js/reveal.js" defer></script>
 
-const obs=new IntersectionObserver(es=>{
-  es.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add('v');
-  });
-},{threshold:0.07});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-const nls=document.querySelectorAll('.nav-link');
-const scs=document.querySelectorAll('section[id]');
-window.addEventListener('scroll',()=>{
-  let cur='';
-  scs.forEach(s=>{ if(scrollY>=s.offsetTop-80) cur=s.id; });
-  nls.forEach(a=>{
-    const on=a.getAttribute('href')===`#${cur}`;
-    a.style.color=on?'var(--ink)':'';
-    a.style.background=on?'var(--paper3)':'';
-  });
-});
-</script>
 </body>
 </html>

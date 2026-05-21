@@ -1,0 +1,34 @@
+/* ────────────────────────────────────────────────────────────
+   base.css — design tokens, reset, body, selection, scrollbar
+   ──────────────────────────────────────────────────────────── */
+
+:root {
+  --ink:#0E0F11; --ink2:#2A2D33; --ink3:#6B7080; --ink4:#A0A6B5;
+  --paper:#F5F4F0; --paper2:#EDECE7; --paper3:#E3E1D8; --rule:#D4D1C6;
+  --blue:#1A3F6F; --blue2:#2458A0; --blue-light:#E8EEF8;
+  --red:#B83232; --green:#2A6B3F;
+  --mono:'IBM Plex Mono',monospace;
+  --serif:'EB Garamond',Georgia,serif;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+
+::selection{background:var(--blue);color:white;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--paper2);}
+::-webkit-scrollbar-thumb{background:var(--rule);}
+
+canvas#bg{
+  position:fixed;inset:0;z-index:0;
+  pointer-events:none;opacity:0.045;
+}

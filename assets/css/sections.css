@@ -1,0 +1,79 @@
+/* ────────────────────────────────────────────────────────────
+   sections.css — section layout, about/hero, section headers,
+                  reveal animation
+   ──────────────────────────────────────────────────────────── */
+
+/* ── HERO / ABOUT ── */
+#about{
+  padding:130px 56px 96px;
+  border-bottom:1px solid var(--rule);
+  min-height:100vh;display:flex;align-items:center;
+}
+.about-inner{
+  max-width:1100px;width:100%;
+  display:grid;grid-template-columns:1fr 380px;
+  gap:80px;align-items:start;
+}
+.about-tag{
+  font-family:var(--mono);font-size:9.5px;letter-spacing:0.14em;
+  color:var(--blue2);margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.about-tag::before{content:'';width:22px;height:1px;background:var(--blue2);}
+.about-name{
+  font-family:var(--serif);
+  font-size:clamp(44px,5vw,72px);
+  font-weight:400;line-height:0.96;letter-spacing:-0.025em;
+  margin-bottom:6px;
+}
+.about-name-kr{
+  font-family:var(--serif);font-size:clamp(18px,2vw,26px);
+  font-weight:400;color:var(--ink3);letter-spacing:0.02em;
+  margin-bottom:32px;display:block;
+}
+.about-desc{
+  font-size:15px;font-weight:300;line-height:1.82;color:var(--ink2);
+  max-width:570px;margin-bottom:36px;
+  border-left:2px solid var(--rule);padding-left:20px;
+}
+.about-desc em{font-style:italic;color:var(--ink3);}
+.about-desc strong{font-weight:500;color:var(--ink);}
+.about-links{display:flex;gap:10px;flex-wrap:wrap;}
+
+/* ── GENERIC SECTIONS ── */
+section{border-bottom:1px solid var(--rule);padding:88px 56px;}
+.sec-inner{max-width:1100px;margin:0 auto;}
+
+.sec-header{
+  display:grid;grid-template-columns:160px 1fr;
+  gap:40px;margin-bottom:64px;
+}
+.sec-num{
+  font-family:var(--mono);font-size:9px;letter-spacing:0.14em;
+  color:var(--ink4);padding-top:5px;
+}
+.sec-title{
+  font-family:var(--serif);
+  font-size:clamp(26px,2.8vw,38px);
+  font-weight:500;line-height:1.1;letter-spacing:-0.01em;
+}
+.sec-title em{font-style:italic;color:var(--blue2);}
+.sec-sub{
+  font-size:13.5px;font-weight:300;
+  color:var(--ink3);line-height:1.72;
+  margin-top:10px;max-width:620px;
+}
+
+/* ── PER-SECTION BACKGROUNDS ── */
+#research{background:var(--paper);}
+#publications{background:var(--paper2);}
+#cv-section{background:var(--paper);}
+#contact{background:var(--paper2);}
+
+/* ── REVEAL ANIMATION ── */
+.reveal{
+  opacity:0;transform:translateY(14px);
+  transition:opacity .6s cubic-bezier(.4,0,.2,1),
+             transform .6s cubic-bezier(.4,0,.2,1);
+}
+.reveal.v{opacity:1;transform:none;}
