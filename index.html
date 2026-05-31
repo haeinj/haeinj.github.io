@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haein Jung — Postdoctoral Researcher</title>
+<title>Haein Jung — Physics-Informed Learning for Transport Systems</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
@@ -32,44 +32,56 @@
 <section id="about">
   <div class="about-inner">
     <div>
-      <div class="about-tag">Physics-informed learning · thermofluid transport systems</div>
+      <div class="about-tag">Physics-informed learning · hidden transport physics</div>
       <div class="about-name">Haein Jung</div>
       <span class="about-name-kr">정 해 인</span>
+
       <p class="about-desc">
         Postdoctoral researcher at GIST.
         <br><br>
-        Current work focuses on scientific machine learning for inverse modeling
-        and hidden-state inference in thermofluid transport systems, combining
-        governing equations with sparse experimental observations.<br>
-        
-        Recent studies include bubble-dynamics-based inverse problems in multiphase
-        flows using physics-informed neural networks (PINNs), with longer-term
-        interests in predictive modeling of nonlinear transport phenomena.
+        My work focuses on discovering hidden transport physics from sparse observations
+        by combining governing equations, experimental data, and scientific machine learning.
+        <br><br>
+        Current studies use physics-informed neural networks to infer unobservable states
+        in multiphase flow systems. More broadly, I aim to develop AI-based physics discovery
+        frameworks for nonlinear transport phenomena, including phase-change flows, closure
+        problems, and turbulence.
       </p>
+
       <div class="about-links">
-        <a href="#publications" class="btn-solid">Publications</a>
-        <a href="#research" class="btn-ghost">Research →</a>
+        <a href="#research" class="btn-solid">Research</a>
+        <a href="#publications" class="btn-ghost">Selected Publications →</a>
       </div>
     </div>
 
     <div class="info-card">
       <div class="info-label">profile</div>
+
       <div class="info-row">
         <span class="info-key">position</span>
-        <span class="info-val">Postdoctoral Researcher<br>School of Mechanical Engineering, GIST</span>
+        <span class="info-val">Postdoctoral Researcher<br>School of Mechanical and Robotics Engineering, GIST</span>
       </div>
+
       <div class="info-row">
         <span class="info-key">education</span>
         <span class="info-val">Ph.D., Mechanical Engineering, GIST<br>M.S., Mechanical Engineering, Korea Aerospace University</span>
       </div>
+
       <div class="info-row">
-        <span class="info-key">interests</span>
-        <span class="info-val">Scientific machine learning<br>Inverse modeling & hidden-state inference<br>Transport phenomena in thermofluid systems</span>
+        <span class="info-key">focus</span>
+        <span class="info-val">Scientific machine learning<br>Hidden-state inference<br>Transport phenomena and closure problems</span>
       </div>
+
+      <div class="info-row">
+        <span class="info-key">background</span>
+        <span class="info-val">Multiphase flow experiments<br>Mechanistic heat-transfer modeling<br>Chaotic advection and thermal-fluid systems</span>
+      </div>
+
       <div class="info-row">
         <span class="info-key">papers</span>
-        <span class="info-val">8 SCIE publications · 6 first-author</span>
+        <span class="info-val">8 peer-reviewed journal articles · 6 first-author</span>
       </div>
+
       <div class="info-row">
         <span class="info-key">email</span>
         <span class="info-val"><a href="mailto:haeinjung@gm.gist.ac.kr">haeinjung@gm.gist.ac.kr</a></span>
@@ -84,10 +96,12 @@
     <div class="sec-header reveal">
       <div class="sec-num">§ 01</div>
       <div>
-        <h2 class="sec-title">Research<br><em>Interests</em></h2>
+        <h2 class="sec-title">Research<br><em>Direction</em></h2>
         <p class="sec-sub">
-          Current work centers on scientific machine learning for inverse modeling
-          and predictive inference in thermofluid transport systems.
+          I study how scientific machine learning can infer hidden states, discover
+          governing relations, and build predictive models for complex transport systems.
+          Boiling and multiphase flow serve as the primary experimental testbed; the
+          longer-term direction is broader nonlinear transport and closure discovery.
         </p>
       </div>
     </div>
@@ -96,73 +110,63 @@
 
       <div class="res-card full">
         <div class="rc-num">01 — current focus</div>
-        <div class="rc-title">Scientific machine learning for inverse transport problems</div>
+        <div class="rc-title">Hidden-state inference and physics discovery in transport systems</div>
         <p class="rc-body">
-          Ongoing research applying physics-informed neural networks (PINNs) to inverse
-          inference of unobservable physical fields in two-phase systems. The first
-          benchmark recovers local wall superheat from observed bubble-growth dynamics,
-          using the Plesset–Zwick analytical solution and prior experimental data with
-          HFE-7100 as the validation base. The longer-term direction is operator-based
-          inference for parametric multiphase problems where direct measurement is
-          impractical or impossible.
+          Current work develops physics-informed learning methods that combine sparse
+          observations with governing equations to infer physical quantities that are
+          difficult or impossible to measure directly. The objective is not only to
+          accelerate simulation, but to recover latent states and candidate physical
+          relations that improve mechanistic understanding.
           <br><br>
-          Implementation: DeepXDE / PyTorch. Manuscripts in preparation.
+          The first benchmark uses observed bubble-growth dynamics to infer local wall
+          superheat in a phase-change system, using the Plesset–Zwick analytical solution
+          and prior HFE-7100 boiling data as the validation basis.
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">PINN</span>
-          <span class="rc-tag">inverse problem</span>
-          <span class="rc-tag">DeepXDE</span>
-          <span class="rc-tag">bubble dynamics</span>
-          <span class="rc-tag">operator learning</span>
+          <span class="rc-tag">scientific ML</span>
+          <span class="rc-tag">PINNs</span>
+          <span class="rc-tag">inverse problems</span>
+          <span class="rc-tag">hidden-state inference</span>
+          <span class="rc-tag">physics discovery</span>
         </div>
       </div>
 
       <div class="res-card">
-        <div class="rc-num">02 — foundation</div>
-        <div class="rc-title">Subcooled flow boiling &amp; density-wave instability</div>
+        <div class="rc-num">02 — primary testbed</div>
+        <div class="rc-title">Multiphase transport and boiling dynamics</div>
         <p class="rc-body">
-          Experimental investigation of subcooled flow boiling in horizontal concentric
-          annular geometries. Focus on heat transfer characteristics, bubble behavior,
-          and density-wave oscillations near the onset of nucleate boiling — providing
-          the experimental ground truth that informs the current PINN work.
+          Boiling provides a grounded testbed for AI-based physics discovery because many
+          important mechanisms are only partially observable, including nucleation-site
+          activation, microlayer effects, bubble interaction, and heat-flux partitioning.
+          My prior experimental and mechanistic studies of subcooled boiling, density-wave
+          instability, and oscillatory flow boiling provide physical intuition and data
+          context for the current inverse-modeling work.
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">subcooled boiling</span>
+          <span class="rc-tag">flow boiling</span>
+          <span class="rc-tag">bubble dynamics</span>
           <span class="rc-tag">ONB</span>
           <span class="rc-tag">density-wave instability</span>
+          <span class="rc-tag">hidden mechanisms</span>
         </div>
       </div>
 
       <div class="res-card">
-        <div class="rc-num">03 — foundation</div>
-        <div class="rc-title">Mechanistic modeling of flow boiling instabilities</div>
+        <div class="rc-num">03 — long-term direction</div>
+        <div class="rc-title">Nonlinear transport, closure problems, and turbulence</div>
         <p class="rc-body">
-          Mechanistic modeling of oscillatory flow boiling in large length-to-diameter
-          ratio micro-channel heat sinks, including an analytical model predicting
-          oscillation frequency under different operating conditions
-          (IJHMT, 2023).
+          The long-term goal is to extend physics-informed discovery from phase-change
+          systems to broader nonlinear transport problems where unresolved scales and
+          closure relations limit predictive modeling. This includes turbulence and
+          multiphase transport, where governing equations are known but effective reduced
+          descriptions, closures, and observable-to-hidden-state mappings remain incomplete.
         </p>
         <div class="rc-tags">
-          <span class="rc-tag">micro-channel</span>
-          <span class="rc-tag">two-phase flow</span>
-          <span class="rc-tag">mechanistic modeling</span>
-        </div>
-      </div>
-
-      <div class="res-card full">
-        <div class="rc-num">04 — prior</div>
-        <div class="rc-title">Earlier work</div>
-        <p class="rc-body">
-          Prior projects included liquid-immersion thermal management of multi-slab
-          Nd:YLF laser systems (with GIST APRI), thermal-fluid design for ultra-fast
-          EV charging cable cooling. Earlier work includes chaotic advection and transport enhancement
-          in laminar mixing systems during the M.S. period at KAU.
-        </p>
-        <div class="rc-tags">
-          <span class="rc-tag">solid-state laser</span>
-          <span class="rc-tag">CFD</span>
-          <span class="rc-tag">thermo-optics</span>
-          <span class="rc-tag">computational rheology</span>
+          <span class="rc-tag">nonlinear transport</span>
+          <span class="rc-tag">closure discovery</span>
+          <span class="rc-tag">turbulence</span>
+          <span class="rc-tag">operator learning</span>
+          <span class="rc-tag">multiscale systems</span>
         </div>
       </div>
 
@@ -176,11 +180,11 @@
     <div class="sec-header reveal">
       <div class="sec-num">§ 02</div>
       <div>
-        <h2 class="sec-title"><em>Publications</em></h2>
+        <h2 class="sec-title">Selected<br><em>Publications</em></h2>
         <p class="sec-sub">
-          Peer-reviewed publications in thermofluid transport phenomena,
-          nonlinear flow dynamics, and multiphase systems.
-          PINN-based work currently in preparation.
+          Selected works that define the research trajectory from chaotic transport
+          and multiphase-flow experiments to mechanistic modeling and physics-informed
+          inverse problems.
         </p>
       </div>
     </div>
@@ -188,75 +192,43 @@
     <div class="pub-list reveal">
 
       <div class="pub-item">
+        <div class="pub-year">in prep.</div>
+        <div>
+          <div class="pub-title">Physics-informed inverse inference of wall superheat from bubble-growth dynamics</div>
+          <div class="pub-journal-name">H. Jung · manuscript in preparation</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
         <div class="pub-year">2026</div>
         <div>
           <div class="pub-title">Experimental investigation of subcooled density-wave oscillations in concentric annulus</div>
           <div class="pub-journal-name"><em>International Journal of Heat and Mass Transfer</em> · H. Jung, S. Lee</div>
         </div>
-        <div class="pub-badge scie">SCIE</div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2025</div>
-        <div>
-          <div class="pub-title">Comparison of Subcooled Flow Boiling in Concentric Annuli with Bare and Finned Surfaces</div>
-          <div class="pub-journal-name"><em>Applied Thermal Engineering</em> · H. Noh, H. Jung, M. Kwon, S. Lee</div>
-        </div>
-        <div class="pub-badge scie">SCIE</div>
       </div>
 
       <div class="pub-item">
         <div class="pub-year">2024</div>
         <div>
-          <div class="pub-title">Experimental and Photographic Investigation into Horizontal Subcooled Flow Boiling in Concentric Annuli for Cooling System of Ultra-Fast Electric Vehicle Charging Cables</div>
+          <div class="pub-title">Experimental and photographic investigation into horizontal subcooled flow boiling in concentric annuli for cooling system of ultra-fast electric vehicle charging cables</div>
           <div class="pub-journal-name"><em>International Communications in Heat and Mass Transfer</em> · H. Jung, H. Noh, S. Lee</div>
         </div>
-        <div class="pub-badge scie">SCIE</div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2024</div>
-        <div>
-          <div class="pub-title">Experimental Investigation into Thermal Characteristics of Subcooled Flow Boiling in Horizontal Concentric Annuli for Cooling Ultra-Fast Electric Vehicle Charging Cables</div>
-          <div class="pub-journal-name"><em>Case Studies in Thermal Engineering</em> · H. Jung, S. Lee</div>
-        </div>
-        <div class="pub-badge scie">SCIE</div>
       </div>
 
       <div class="pub-item">
         <div class="pub-year">2023</div>
         <div>
-          <div class="pub-title">Mechanistic Model to Predict Oscillating Frequency of Flow Boiling in Large Length-to-Diameter Ratio Micro-Channel Heat Sinks</div>
+          <div class="pub-title">Mechanistic model to predict oscillating frequency of flow boiling in large length-to-diameter ratio micro-channel heat sinks</div>
           <div class="pub-journal-name"><em>International Journal of Heat and Mass Transfer</em> · H. Jung, S. Lee</div>
         </div>
-        <div class="pub-badge scie">SCIE</div>
       </div>
 
       <div class="pub-item">
         <div class="pub-year">2020</div>
         <div>
-          <div class="pub-title">Fouling Mitigation in Crossflow Filtration Using Chaotic Advection: A Numerical Study</div>
+          <div class="pub-title">Fouling mitigation in crossflow filtration using chaotic advection: A numerical study</div>
           <div class="pub-journal-name"><em>AIChE Journal</em> · S.Y. Jung, H.I. Jung, T.G. Kang, K.H. Ahn</div>
         </div>
-        <div class="pub-badge scie">SCIE</div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2020</div>
-        <div>
-          <div class="pub-title">Flow and Mixing Characteristics of a Groove-Embedded Partitioned Pipe Mixer</div>
-          <div class="pub-journal-name"><em>Korea-Australia Rheology Journal</em> · H.I. Jung, J.E. Park, S.Y. Jung, T.G. Kang, K.H. Ahn</div>
-        </div>
-        <div class="pub-badge scie">SCIE</div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-year">2018</div>
-        <div>
-          <div class="pub-title">Numerical Study on the Mixing in a Barrier-Embedded Partitioned Pipe Mixer (BPPM) for Non-Creeping Flow Conditions</div>
-          <div class="pub-journal-name"><em>Korea-Australia Rheology Journal</em> · H.I. Jung, S.Y. Jung, T.G. Kang, K.H. Ahn</div>
-        </div>
-        <div class="pub-badge scie">SCIE</div>
       </div>
 
     </div>
@@ -269,7 +241,11 @@
     <div class="sec-header reveal">
       <div class="sec-num">§ 03</div>
       <div>
-        <h2 class="sec-title">Curriculum<br><em>Vitae</em></h2>
+        <h2 class="sec-title">Background<br><em>&amp; CV</em></h2>
+        <p class="sec-sub">
+          Research background across thermofluid experiments, mechanistic modeling,
+          computational transport, and scientific machine learning.
+        </p>
       </div>
     </div>
 
@@ -290,7 +266,7 @@
           <div class="cv-year">~2025.8</div>
           <div>
             <div class="cv-title">Ph.D., Mechanical Engineering</div>
-            <div class="cv-place">GIST (Gwangju Institute of Science and Technology)<br>Two-phase heat transfer<br>Advisor: Prof. Seunghyun Lee</div>
+            <div class="cv-place">GIST · two-phase heat transfer and flow instability<br>Advisor: Prof. Seunghyun Lee</div>
           </div>
         </div>
 
@@ -298,38 +274,46 @@
           <div class="cv-year">~2019.5</div>
           <div>
             <div class="cv-title">M.S., Mechanical Engineering</div>
-            <div class="cv-place">Korea Aerospace University<br>chaotic mixing<br>Advisor: Prof. Tae Gon Kang</div>
+            <div class="cv-place">Korea Aerospace University · chaotic advection and laminar mixing<br>Advisor: Prof. Tae Gon Kang</div>
           </div>
         </div>
       </div>
 
       <div class="cv-col">
-        <div class="cv-col-title">research projects &amp; activities</div>
+        <div class="cv-col-title">research background</div>
 
         <div class="cv-item">
           <div class="cv-year">current</div>
           <div>
-            <div class="cv-title">Physics-informed neural networks for inverse multiphase problems</div>
-            <div class="cv-place">DeepXDE / PyTorch · bubble-dynamics inverse inference</div>
+            <div class="cv-title">Scientific machine learning for inverse multiphase problems</div>
+            <div class="cv-place">Physics-informed neural networks · sparse observations · hidden-state inference</div>
           </div>
         </div>
 
         <div class="cv-item">
-          <div class="cv-year">~2026.6</div>
+          <div class="cv-year">Ph.D.</div>
           <div>
-            <div class="cv-title">Liquid-immersion laser thermal management</div>
-            <div class="cv-place">Collaboration with GIST APRI<br>Multi-slab Nd:YLF · thermo-optical coupling</div>
+            <div class="cv-title">Subcooled boiling and flow instability</div>
+            <div class="cv-place">Boiling experiments · density-wave oscillation · mechanistic modeling</div>
           </div>
         </div>
 
         <div class="cv-item">
-          <div class="cv-year">~2024</div>
+          <div class="cv-year">M.S.</div>
           <div>
-            <div class="cv-title">EV fast-charging cable cooling</div>
-            <div class="cv-place">Subcooled flow boiling in concentric annuli</div>
+            <div class="cv-title">Chaotic advection and transport enhancement</div>
+            <div class="cv-place">Numerical studies of laminar mixing and crossflow filtration</div>
           </div>
         </div>
 
+        <div class="cv-item">
+          <div class="cv-year">prior</div>
+          <div>
+            <div class="cv-title">Laser thermal-fluid systems and high-power cooling</div>
+            <div class="cv-place">Liquid-immersion thermal management · thermo-optical coupling · CFD-based design</div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -342,17 +326,19 @@
       <div>
         <div class="contact-heading">Get in<br><em>touch</em></div>
         <p class="contact-body">
-          I welcome enquiries regarding research collaboration on scientific machine learning,
-inverse problems, and transport phenomena in thermofluid systems.
+          I welcome enquiries regarding scientific machine learning, inverse problems,
+          hidden-state inference, and transport phenomena in thermofluid systems.
         </p>
+
         <div class="contact-rows">
           <div class="c-row">
             <span class="c-key">email</span>
-            <span class="c-val">haeinjung@gm.gist.ac.kr</span>
+            <span class="c-val"><a href="mailto:haeinjung@gm.gist.ac.kr">haeinjung@gm.gist.ac.kr</a></span>
           </div>
+
           <div class="c-row">
             <span class="c-key">office</span>
-            <span class="c-val">School of Mechanical Engineering, GIST<br>Gwangju, Republic of Korea</span>
+            <span class="c-val">School of Mechanical and Robotics Engineering, GIST<br>Gwangju, Republic of Korea</span>
           </div>
         </div>
       </div>
