@@ -1,57 +1,38 @@
-# Haein Jung — Academic Site
+# Haein Jung — Academic Website
 
-Static site, no build step. GitHub Pages direct deploy.
+Personal research website for Haein Jung.
 
-## Structure
+A lightweight static site built with HTML/CSS/JavaScript and deployed through GitHub Pages.
 
-```
-.
-├── index.html              # Content only — sections, copy, links
-├── assets/
-│   ├── css/
-│   │   ├── base.css        # :root tokens, reset, body, scrollbar, canvas#bg
-│   │   ├── nav.css         # top navigation bar
-│   │   ├── sections.css    # about/hero, .sec-header, per-section bg, .reveal
-│   │   ├── components.css  # buttons, info-card, res-card, pub-item,
-│   │   │                   #   cv-item, contact, footer
-│   │   └── responsive.css  # @media (max-width:860px) overrides
-│   └── js/
-│       ├── canvas-bg.js    # drifting particles (very low opacity)
-│       └── reveal.js       # IntersectionObserver reveal + nav highlight
-└── README.md
-```
+## Purpose
 
-## CSS load order
+This website presents research interests and vision:
 
-`base → nav → sections → components → responsive`
+- Scientific AI for physics discovery
+- Physics-informed learning
+- Multiphase transport and thermal systems
+- Computational physics and HPC simulation
 
-`responsive.css` must load last so its overrides win.
+Detailed information is maintained externally:
 
-## Common edits
+- CV → PDF
+- Publications → Google Scholar
+- Research identity → ORCID
+- Code/projects → GitHub
 
-| Task | File |
+## Updates
+
+| Change | File |
 |---|---|
-| Change copy / add a publication | `index.html` |
-| Adjust a color or font | `assets/css/base.css` (`:root` block) |
-| Tweak nav bar | `assets/css/nav.css` |
-| Style a research card / pub item | `assets/css/components.css` |
-| Adjust mobile layout | `assets/css/responsive.css` |
-| Change background animation | `assets/js/canvas-bg.js` |
+| Research content | `index.html` |
+| CV | `assets/cv/Haein_Jung_CV.pdf` |
+| Style | `assets/css/` |
+| Animation | `assets/js/` |
 
-## Adding a publication
 
-In `index.html`, find `<!-- ══ PUBLICATIONS ══ -->`, copy any `.pub-item`
-block, and update year / title / journal / authors.
-Set `.pub-badge` class to `scie` (published) or `prep` (in preparation).
+## Deployment
 
-Place new entries in reverse-chronological order (newest at top).
+Push to GitHub.  
+GitHub Pages deploys directly from the repository root.
 
-## Adding a research card
-
-Copy a `.res-card` block inside `.res-grid`. Update `rc-num`, `rc-title`,
-`rc-body`, and `rc-tags`. For a full-width card, add the `full` class.
-
-## Deploy
-
-Push to GitHub. Pages serves from repo root.
-No build, no bundler, no framework.
+No build system or framework required.
